@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../custom-shaders-and-materials/">
+        <link rel="prev" href="../performance/">
       
-      
-        <link rel="next" href="../performance/">
       
       
         
@@ -23,7 +21,7 @@
     
     
       
-        <title>FAQ and Troubleshooting - Layer Mask Docs</title>
+        <title>Quick Start Guide - Layer Mask Docs</title>
       
     
     
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#faq-and-troubleshooting" class="md-skip">
+        <a href="#quick-start-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FAQ and Troubleshooting
+              Quick Start Guide
             
           </span>
         </div>
@@ -245,11 +243,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../faq-and-troubleshooting/" class="md-tabs__link">
         
   
   
@@ -285,9 +281,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../quick-start-guide/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -391,37 +389,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FAQ and Troubleshooting
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../faq-and-troubleshooting/" class="md-nav__link">
         
   
   
@@ -437,48 +408,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-are-my-layers-rendering-in-black-without-color" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why are my layers rendering in black without color?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-are-the-selected-layers-expanding-and-color-bleeding" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why are the selected layers expanding and color bleeding?
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -514,10 +443,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../quick-start-guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -533,6 +471,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -557,36 +496,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-are-my-layers-rendering-in-black-without-color" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why are my layers rendering in black without color?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-are-the-selected-layers-expanding-and-color-bleeding" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why are the selected layers expanding and color bleeding?
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -602,18 +511,64 @@
 
 
 
-<h1 id="faq-and-troubleshooting"><strong>FAQ and Troubleshooting</strong></h1>
-<h2 id="why-are-my-layers-rendering-in-black-without-color">Why are my layers rendering in black without color?</h2>
-<p>The selected layers rendering only in black is a common issue caused by not having any lighting layers selected. To fix this problem, there are a few options:</p>
-<ol>
-<li>Ensure a layer with a global light object is selected.</li>
-<li>Use other non-global light sources and ensure that their layer is selected.</li>
-<li>Change the material of the Sprite Renderers of the game objects on the selected layer to Sprite-Unlit-Default.</li>
-</ol>
-<h2 id="why-are-the-selected-layers-expanding-and-color-bleeding">Why are the selected layers expanding and color bleeding?</h2>
-<p>This is a recursive rendering issue caused by having the renderer index set to the same value as the renderer that has the render feature attached.</p>
-<p>It will continuously render the selected layers through the same renderer, creating a bleeding effect.</p>
-<p>To fix this issue, simply create a second renderer and assign the renderer index to the new renderer.</p>
+<h1 id="quick-start-guide"><strong>Quick Start Guide</strong></h1>
+<p>Setting up a custom render pass is simple. Follow these steps to get started!</p>
+<h1 id="1-scene-setup">1. Scene Setup</h1>
+<p>We'll start off with a simple scene in the editor. The player sprite is very dark against the background, so in this guide, we'll set up a blur pass on the background to make the player pop.</p>
+<p><img alt="DemoScene" src="../images/demo_scene.png" /></p>
+<p>This scene contains the default Unity Main Camera, as well as a Global Light 2D. There is also the player game object, some walls and platforms, and the background sprites.</p>
+<ul>
+<li>Firstly, we should switch the background sprites to a separate Layer Mask. Select the parent game object, click on the layer dropdown, and change it to the desired layer mask. 
+Here, we added a layer called 'Background'. </li>
+</ul>
+<p><img alt="ChangeLayerMask" src="../images/change_layer_mask.png" /></p>
+<p>The editor will prompt you to ask if you also want to change child layer masks. We <strong>do</strong> want all children to also be on the blurred background layer, so click 'Yes, change children.'</p>
+<ul>
+<li>
+<p>Also change your GlobalLight2D to a separate layer, so we can capture it in the render pass. Here, we made another new layer called 'Lighting'. </p>
+</li>
+<li>
+<p>You will also want to deselect your desired layers from the Main Camera's culling mask. This prevents the desired layers from rendering twice (both on the Main Camera and from the Render Feature). </p>
+</li>
+<li>
+<p>Here, we deselected the 'Background' mask, but kept the 'Lighting' mask enabled because we want the lights to affect both the blurred layers and the main layers.</p>
+</li>
+</ul>
+<p><img alt="CullingMask" src="../images/culling_mask.png" /></p>
+<h1 id="2-renderer2d-setup">2. Renderer2D Setup</h1>
+<p>Now we need to configure the render feature on the renderer. </p>
+<h2 id="locating-the-renderer2d-asset">Locating the Renderer2D asset</h2>
+<p>Find your project's Renderer2D asset. It is usually found at 'Assets/Settings/Renderer2D'.</p>
+<p>If you can't find it, first find your Universal Render Pipeline asset. This can be found by going to Edit &gt; Project Settings &gt; Quality &gt; Render Pipeline Asset.
+Once you have located your Universal asset, you can find your 2D Renderer in the Renderer list at the top of the Inspector window.</p>
+<h2 id="adding-the-render-feature">Adding the Render Feature</h2>
+<p>Scroll to the bottom of the Inspector window of your Renderer2D asset, and click 'Add Render Feature'.</p>
+<p><img alt="AddRenderFeature" src="../images/add_render_feature.png" /></p>
+<p>Select <strong>'Layer FX Render Feature'.</strong></p>
+<p><img alt="AddLayerFXRenderFeature" src="../images/add_layerfx_render_feature.png" /></p>
+<h2 id="configuring-the-render-feature">Configuring the Render Feature</h2>
+<p>Now we must configure the settings of the render feature.</p>
+<ul>
+<li><strong>Pass Name:</strong> Set to whatever you want. This internally names the render pass for debugging purposes. Here we'll name it 'BackgroundBlurPass'.</li>
+<li><strong>Renderer Index:</strong> This selects what 2D renderer the render feature should render to. To prevent recursive rendering issues, set this number to a <strong>different</strong> index than the renderer that the render feature is attached to.
+Here we will set it to 1, as 2D renderer we are using is at index 0.</li>
+<li><strong>Rendering Order:</strong> This determines at what point during the rendering process the feature will render at. Select <strong>BeforeRenderingOpaques</strong> to render behind the main scene layers, or
+<strong>AfterRenderTransparents</strong> to render on top of the main scene. As we are trying to blur the background, we will set it to <strong>BeforeRenderingOpaques</strong>.</li>
+<li><strong>Tex:</strong> Here, you can select a texture to render from as an alternative to rendering from a Layer Mask. This is useful for rendering layers with post processing effects. Leave this field
+blank to render from the selected layers. In this tutorial, we will leave it blank as we want to render from the Background Layer Mask.</li>
+<li><strong>Materials:</strong> Select 1 or more materials to render the desired layers with. Selecting more than one materials will stack the materials in the listed order.
+This allows for fancy effects that combine other effects, or multi-pass effects. In this tutorial, we are creating a 2-pass blur to save performance.
+We will add two blur materials, one that blurs horizontally and one that blurs vertically.</li>
+<li><strong>Capture Layers:</strong> This is where we select the layers that the effect should be applied to. Here we will select the 'Background' and 'Lighting' layers.
+Not selecting the lighting layers will cause it to render only black if you have selected a Sprite-Lit material!</li>
+<li><strong>Downscaling:</strong> Downscales the texture to save performance. In this guide, we will select 2x, because there will be minimal visual impact due to blurring the layers.</li>
+<li><strong>Render In Scene View</strong>: Enable this to render the effect in scene view.</li>
+<li><strong>Hidden Layers:</strong> If Render In Scene View is enabled, this determines what layers will <strong>not</strong> render in scene view.</li>
+</ul>
+<p>These are the final configured settings:</p>
+<p><img alt="FinalSettings" src="../images/final_settings.png" /></p>
+<p>Now hit Play and watch the effect! Our blur effect turned out really well, and now the player is much more visible against the noisy background. </p>
+<p><img alt="BlurEffect" src="../images/blur_effect.png" /></p>
 
 
 
