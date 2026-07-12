@@ -228,6 +228,25 @@
   
   
     <li class="md-tabs__item">
+      <a href="../API-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../custom-shaders-and-materials/" class="md-tabs__link">
         
   
@@ -348,6 +367,33 @@
     
   
     Welcome to MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
   
 
     
@@ -611,9 +657,9 @@
 <li>Change the material of the Sprite Renderers of the game objects on the selected layer to Sprite-Unlit-Default.</li>
 </ol>
 <h2 id="why-are-the-selected-layers-expanding-and-color-bleeding">Why are the selected layers expanding and color bleeding?</h2>
-<p>This is a recursive rendering issue caused by having the renderer index set to the same value as the renderer that has the render feature attached.</p>
+<p>This is a recursive rendering issue that can occasionally be caused by having the renderer index set to the same value as the renderer that has the render feature attached.</p>
 <p>It will continuously render the selected layers through the same renderer, creating a bleeding effect.</p>
-<p>To fix this issue, simply create a second renderer and assign the renderer index to the new renderer.</p>
+<p>To fix this issue, simply create a second renderer and assign the renderer index field to the index of the new renderer.</p>
 
 
 

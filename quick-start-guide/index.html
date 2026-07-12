@@ -226,6 +226,25 @@
   
   
     <li class="md-tabs__item">
+      <a href="../API-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../custom-shaders-and-materials/" class="md-tabs__link">
         
   
@@ -346,6 +365,33 @@
     
   
     Welcome to MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
   
 
     
@@ -550,7 +596,8 @@ Once you have located your Universal asset, you can find your 2D Renderer in the
 <p>Now we must configure the settings of the render feature.</p>
 <ul>
 <li><strong>Pass Name:</strong> Set to whatever you want. This internally names the render pass for debugging purposes. Here we'll name it 'BackgroundBlurPass'.</li>
-<li><strong>Renderer Index:</strong> This selects what 2D renderer the render feature should render to. To prevent recursive rendering issues, set this number to a <strong>different</strong> index than the renderer that the render feature is attached to.
+<li><strong>Renderer Index:</strong> This selects what renderer the render feature should render on. To see the list of available renderers, look at the Renderer List field in your Universal Renderer asset. 
+For most cases, leave this field set to 0.
 Here we will set it to 1, as 2D renderer we are using is at index 0.</li>
 <li><strong>Rendering Order:</strong> This determines at what point during the rendering process the feature will render at. Select <strong>BeforeRenderingOpaques</strong> to render behind the main scene layers, or
 <strong>AfterRenderTransparents</strong> to render on top of the main scene. As we are trying to blur the background, we will set it to <strong>BeforeRenderingOpaques</strong>.</li>

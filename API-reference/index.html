@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../API-reference/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../faq-and-troubleshooting/">
+        <link rel="next" href="../custom-shaders-and-materials/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Using Custom Shaders and Materials - Layer Mask Docs</title>
+        <title>API Reference - Layer Mask Docs</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-custom-shaders-and-materials" class="md-skip">
+        <a href="#api-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using Custom Shaders and Materials
+              API Reference
             
           </span>
         </div>
@@ -226,9 +226,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../API-reference/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -245,11 +247,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../custom-shaders-and-materials/" class="md-tabs__link">
         
   
   
@@ -383,33 +383,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../API-reference/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    API Reference
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -429,7 +402,7 @@
   <span class="md-ellipsis">
     
   
-    Using Custom Shaders and Materials
+    API Reference
   
 
     
@@ -447,7 +420,7 @@
   <span class="md-ellipsis">
     
   
-    Using Custom Shaders and Materials
+    API Reference
   
 
     
@@ -473,49 +446,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shader-format" class="md-nav__link">
+  <a href="#render-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Shader Format
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Shader Format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-create-a-shader-graph-in-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To create a shader graph in this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-change-an-existing-shader-graph-to-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To change an existing shader graph to this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blend-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Blend Mode
+        Render Mode
       
     </span>
   </a>
@@ -523,10 +457,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reading-the-texture" class="md-nav__link">
+  <a href="#pass-name" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reading the texture
+        Pass Name
       
     </span>
   </a>
@@ -534,10 +468,109 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#for-hlsl-shaders" class="md-nav__link">
+  <a href="#renderer-index" class="md-nav__link">
     <span class="md-ellipsis">
       
-        For HLSL shaders:
+        Renderer Index
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendering-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rendering Order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#render-texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Render Texture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capture-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capture Layers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downscaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Downscaling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#render-in-scene-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Render in Scene View
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-buffer-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Color Buffer Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filter Mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera Tag
       
     </span>
   </a>
@@ -548,6 +581,33 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-shaders-and-materials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Custom Shaders and Materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -660,49 +720,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shader-format" class="md-nav__link">
+  <a href="#render-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Shader Format
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Shader Format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-create-a-shader-graph-in-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To create a shader graph in this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-change-an-existing-shader-graph-to-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To change an existing shader graph to this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blend-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Blend Mode
+        Render Mode
       
     </span>
   </a>
@@ -710,10 +731,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reading-the-texture" class="md-nav__link">
+  <a href="#pass-name" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reading the texture
+        Pass Name
       
     </span>
   </a>
@@ -721,10 +742,109 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#for-hlsl-shaders" class="md-nav__link">
+  <a href="#renderer-index" class="md-nav__link">
     <span class="md-ellipsis">
       
-        For HLSL shaders:
+        Renderer Index
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendering-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rendering Order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#render-texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Render Texture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capture-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capture Layers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downscaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Downscaling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#render-in-scene-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Render in Scene View
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-buffer-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Color Buffer Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filter Mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera Tag
       
     </span>
   </a>
@@ -748,134 +868,108 @@
 
 
 
-<h1 id="using-custom-shaders-and-materials"><strong>Using Custom Shaders and Materials</strong></h1>
-<p>Adding custom materials and shader effects to the render feature is fully supported.
-However, when adding your own custom material to the render feature, the material's shader must be set up in a specific way. </p>
-<h2 id="shader-format">Shader Format</h2>
-<p>The shader must be set up using the URP fullscreen shader format. Only URP-compatible shaders are supported.</p>
-<h3 id="to-create-a-shader-graph-in-this-format">To create a shader graph in this format:</h3>
-<ol>
-<li>Right click the project window.</li>
-<li>Create -&gt; Shader Graph -&gt; URP -&gt; Fullscreen Shader Graph</li>
-</ol>
-<p><img alt="Create Fullscreen Shader Graph" src="../images/creating_fullscreen_shader_graph.png" /></p>
-<h3 id="to-change-an-existing-shader-graph-to-this-format">To change an existing shader graph to this format:</h3>
-<ol>
-<li>In the Graph Inspector window, under the Universal dropdown, find the Material dropdown and select Fullscreen.</li>
-</ol>
-<p><img alt="Change Existing Shader Graph Format" src="../images/change_existing_shader_to_fullscreen.png" /></p>
-<h2 id="blend-mode">Blend Mode</h2>
-<p>All shader blend modes are supported.</p>
-<p>However, the <strong>Alpha</strong> blend mode is recommended. This allows the selected layers to preserve alpha when compositing on top of the scene, meaning non-selected layers will still be visible underneath.</p>
-<p>To change a shader graph's blend mode, go the the Graph Inspector, find the Universal dropdown under Graph Settings, and find the Blend Mode dropdown. Change this to whatever blend mode is desired.</p>
-<p><img alt="Change Shader Graph Blend Mode" src="../images/change_shader_graph_blend_mode.png" /></p>
-<h2 id="reading-the-texture">Reading the texture</h2>
-<p>To access the Texture2D collected by the render feature, you must sample from "_BlitTexture". Other namespaces such as "_CameraColorTexture", "_MainTex", etc. will not work.</p>
-<p>When the material is attached to the render feature, _BlitTexture will contain camera output featuring <strong>only</strong> the selected layers, rendering as they normally would from the main scene camera.</p>
-<p>To create the _BlitTexture field in Shader Graph:</p>
-<ol>
-<li>Go to the window containing the Shader Graph's variables. Click the "+" button. Select Texture2D.</li>
-</ol>
-<p><img alt="Add Texture2D Node" src="../images/create_texture_2d.png" /></p>
-<ol>
-<li>Select the new variable. In the Graph Inspector window, under Node Settings, set the Name to "BlitTexture" and the Reference to "_BlitTexture" exactly as shown in the image. Ensure "Show in Inspector" is checked.</li>
-</ol>
-<p><img alt="Blit Texture Node Settings" src="../images/blit_texture_node_settings.png" /></p>
-<ol>
-<li>To use the texture in your shader, connect a BlitTexture node to the Texture(T2) field on a Texture2D node.</li>
-</ol>
-<h2 id="for-hlsl-shaders">For HLSL shaders:</h2>
+<h1 id="api-reference">API Reference</h1>
+<p>The following page contains detailed information about the different settings and
+fields available for configuring the render feature.</p>
+<h2 id="render-mode">Render Mode</h2>
 <ul>
-<li>The shader should ideally render as a fullscreen pass. Other rendering methods may cause unintended behaviour.</li>
-<li>The shader must sample from _BlitTexture. Sampling from other sources like _CameraColorTexture or _MainTex will not work.</li>
-<li>The shader should output directly to the render target.</li>
-<li>Using blend mode "Blend SrcAlpha OneMinusSrcAlpha" is recommended. Other blend modes are supported but may cause unintended effects.</li>
+<li><strong>Hidden Camera</strong>: </li>
 </ul>
-<p>This is a minimal HLSL shader setup designed to be work with the render feature. This shader simply reads and outputs the texture with no changes. </p>
-<pre><code class="language-HLSL">Shader &quot;Example/ExampleHLSLShader&quot;
-{
-    SubShader
-    {
-        Tags { &quot;RenderPipeline&quot;=&quot;UniversalPipeline&quot; }
-
-        Pass
-        {
-            Name &quot;ExampleHLSLShader&quot;
-
-            //Set blend mode to Alpha. This allows non-selected layers to still show beneath the render feature's selected layers.
-            //Other blend modes may cause unintended side effects.
-            Blend SrcAlpha OneMinusSrcAlpha
-
-            //These settings ensure that the shader behaves as a fullscreen effect rather than a per-object material.
-            Cull Off
-            ZWrite Off
-            ZTest Always
-
-            HLSLPROGRAM
-
-            #pragma target 4.5
-            #pragma vertex Vert
-            #pragma fragment Frag
-
-            #include &quot;Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl&quot;
-
-            //Used to generate a fullscreen triangle without a mesh. 
-            struct Attributes
-            {
-                uint vertexID : SV_VertexID;
-            };
-
-            //Passes screen position and UV coordinates to the fragment shader.
-            struct Varyings
-            {
-                float4 positionCS : SV_POSITION;
-                float2 uv : TEXCOORD0;
-            };
-
-            //The sampled texture must use the _BlitTexture namespace to read information from the render feature.
-            TEXTURE2D(_BlitTexture);
-            SAMPLER(sampler_BlitTexture);
-
-            //Generates a fullscreen triangle procedurally using SV_VertexID. 
-            //Each vertex index is converted into screen-space coordinates and UVs, allowing the shader to render a full-screen effect.
-            Varyings Vert(Attributes input)
-            {
-                Varyings output;
-
-                output.uv = float2(
-                    (input.vertexID &lt;&lt; 1) &amp; 2,
-                    input.vertexID &amp; 2
-                );
-
-                output.positionCS = float4(
-                    output.uv * 2.0 - 1.0,
-                    0.0,
-                    1.0
-                );
-
-                return output;
-            }
-
-
-            half4 Frag(Varyings input) : SV_Target
-            {
-                //Flip Y UV coordinates to ensure the final effect is rendered right-side up.
-                float2 uv = input.uv;
-                uv.y = 1.0 - uv.y;
-
-                //Output the final effect.
-                return SAMPLE_TEXTURE2D(
-                    _BlitTexture,
-                    sampler_BlitTexture,
-                    uv
-                );
-            }
-
-            ENDHLSL
-        }
-    }
-}
-</code></pre>
+<p>Automatically configures a lightweight internal camera to
+render your selected layers. The internal camera will sync to the first correctly
+tagged camera (see the <strong>Camera Tag</strong> field). </p>
+<p>This mode fully supports URP lighting, shadows, and post processing.</p>
+<p>This mode fully captures selected layers regardless of whether any scene cameras
+are already rendering the selected layers. To render specific objects with special
+effects, it is recommended to disable these layers from any other scene cameras so
+they do not render multiple times (e.g. Both from the scene camera <strong>and</strong> the 
+LayerFX render feature).</p>
+<p>This mode can be used for most rendering setups, and is the recommended mode for
+most use cases.</p>
+<ul>
+<li><strong>Renderer List</strong>: </li>
+</ul>
+<p>This mode functions nearly identically to the <strong>Hidden Camera</strong> mode, in that it
+renders the selected layers. The key difference is that
+it is slightly more performant, but does <strong>not</strong> support URP lighting, shadows and
+post processing.</p>
+<p>Use this mode when you want to render a layer or multiple layers with one or more
+materials but do <strong>not</strong> care about rendering lighting effects on these layers.</p>
+<p><strong>Key Limitations</strong>: This mode requires the selected layers to be rendered from
+an existing camera for it to correctly capture them. Therefore it is impossible to
+prevent selected layers from rendering multiple times. However, the cost of this is
+relatively small, and the improved performance of Renderer Lists will
+generally outweigh the performance implications.</p>
+<ul>
+<li><strong>From External Texture</strong>:</li>
+</ul>
+<p>This mode is recommended for advanced use cases, such as isolating built-in URP
+effects to specific layers. </p>
+<p>Unlike the workflow of the other two modes, this mode
+does not give you the option to select specific layers to render. Instead, you
+must input a valid Render Texture. The Render Feature will then render the inputted
+texture to the screen using the selected materials.</p>
+<p>Performance on this mode can vary, depending on the inputted texture's resolution.
+Rendering an additional scene camera to a Render Texture will also add additional
+performance implications.</p>
+<h2 id="pass-name">Pass Name</h2>
+<p>The inputted name is given to the Render Graph passes
+and can be used to identify a specific pass while debugging.</p>
+<h2 id="renderer-index">Renderer Index</h2>
+<p>The Renderer Index determines which renderer to render the effect with. 
+Your project's list of renderers can be found in the project's URP asset. </p>
+<h2 id="rendering-order">Rendering Order</h2>
+<p>Rendering Order determines where in the pipeline the effect will render. This can
+be used to render the effect on top of or below other objects. </p>
+<p>For most 2D projects, set the field to BeforeRenderingOpaques to render beneath
+other sprites. Set the field to AfterRenderingTransparents to render on top of
+other sprites.</p>
+<h2 id="render-texture">Render Texture</h2>
+<p>If using the <strong>From External Texture</strong> rendering mode, this is the texture that
+will be rendered to the screen using the selected materials.</p>
+<h2 id="materials">Materials</h2>
+<p>The Materials list determines what materials the feature will render with. As many
+materials as desired can be selected, but each material will cost 
+additional performance. </p>
+<p>Materials will be applied subsequently in the order they are placed in the list.</p>
+<p>Any valid material will be accepted. Invalid materials may cause issues, or not
+render at all. </p>
+<p>To see the requirements for a valid material, visit the <a href="https://myth0-games.github.io/LayerMaskRendererDocs/custom-shaders-and-materials/">Custom Shaders and
+Materials</a>
+documentation.</p>
+<h2 id="capture-layers">Capture Layers</h2>
+<p>These are the layers that will be rendered by the render feature. If rendering using 
+lit shaders, ensure a layer with a global light or other lighting is selected.
+Otherwise, the layers may render completely black. </p>
+<h2 id="downscaling">Downscaling</h2>
+<p>Increasing this value will cause the feature to be more performant at the cost of
+visual quality. </p>
+<p>For many effects, a downscaling value of 2-4 will have little visual
+impact but will massively improve performance.</p>
+<p>Higher downscaling values will most likely have a negative visual effect, but can be
+used to make pixelated effects. </p>
+<h2 id="render-in-scene-view">Render in Scene View</h2>
+<p>This value determines whether or not the render feature will render in Scene View.</p>
+<p>When using the <strong>Hidden Camera</strong> rendering mode, it is recommended to disable the
+selected layers from the Scene View culling mask to prevent double-rendering in
+Scene View.</p>
+<p>When using the <strong>Renderer List</strong> rendering mode, the selected layers <strong>must</strong> be 
+included in the Scene View culling mask due to Renderer List limitations.</p>
+<p>When using the <strong>From External Texture</strong> rendering mode, the effect may not render
+correctly in Scene View due to texture sizing. It is recommended to disable this 
+setting when using the <strong>From External Texture</strong> mode.</p>
+<h2 id="color-buffer-format">Color Buffer Format</h2>
+<p>Select HDR or LDR color formats.</p>
+<p>If LDR is selected, the effect will render with <strong>R8G8B8A8_SRGB</strong>.</p>
+<p>If HDR is selected, the effect will render with <strong>R16G16B16A16_SFloat</strong>.</p>
+<h2 id="filter-mode">Filter Mode</h2>
+<p>Determines whether the effect will render with Point, Bilinear, or Trilinear
+filtering.</p>
+<h2 id="camera-tag">Camera Tag</h2>
+<p>When using the <strong>Hidden Camera</strong> rendering mode, the internal camera will sync
+itself to the first camera to render with this tag. </p>
+<p>Match this field to the tag on the desired camera for the effect to render
+correctly.</p>
 
 
 
