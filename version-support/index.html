@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../API-reference/">
+        <link rel="prev" href="../quick-start-guide/">
       
-      
-        <link rel="next" href="../faq-and-troubleshooting/">
       
       
         
@@ -23,7 +21,7 @@
     
     
       
-        <title>Using Custom Shaders and Materials - Layer Mask Docs</title>
+        <title>Version Support - Layer Mask Docs</title>
       
     
     
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-custom-shaders-and-materials" class="md-skip">
+        <a href="#version-support" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using Custom Shaders and Materials
+              Version Support
             
           </span>
         </div>
@@ -245,11 +243,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../custom-shaders-and-materials/" class="md-tabs__link">
         
   
   
@@ -323,9 +319,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../version-support/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -429,37 +427,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Using Custom Shaders and Materials
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../custom-shaders-and-materials/" class="md-nav__link">
         
   
   
@@ -475,98 +446,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shader-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Shader Format
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Shader Format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-create-a-shader-graph-in-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To create a shader graph in this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-change-an-existing-shader-graph-to-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To change an existing shader graph to this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blend-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Blend Mode
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reading-the-texture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reading the texture
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#for-hlsl-shaders" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        For HLSL shaders:
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -656,10 +535,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../version-support/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -675,6 +563,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -699,86 +588,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shader-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Shader Format
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Shader Format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-create-a-shader-graph-in-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To create a shader graph in this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-change-an-existing-shader-graph-to-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To change an existing shader graph to this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blend-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Blend Mode
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reading-the-texture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reading the texture
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#for-hlsl-shaders" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        For HLSL shaders:
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -794,134 +603,15 @@
 
 
 
-<h1 id="using-custom-shaders-and-materials"><strong>Using Custom Shaders and Materials</strong></h1>
-<p>Adding custom materials and shader effects to the render feature is fully supported.
-However, when adding your own custom material to the render feature, the material's shader must be set up in a specific way. </p>
-<h2 id="shader-format">Shader Format</h2>
-<p>The shader must be set up using the URP fullscreen shader format. Only URP-compatible shaders are supported.</p>
-<h3 id="to-create-a-shader-graph-in-this-format">To create a shader graph in this format:</h3>
-<ol>
-<li>Right click the project window.</li>
-<li>Create -&gt; Shader Graph -&gt; URP -&gt; Fullscreen Shader Graph</li>
-</ol>
-<p><img alt="Create Fullscreen Shader Graph" src="../images/creating_fullscreen_shader_graph.png" /></p>
-<h3 id="to-change-an-existing-shader-graph-to-this-format">To change an existing shader graph to this format:</h3>
-<ol>
-<li>In the Graph Inspector window, under the Universal dropdown, find the Material dropdown and select Fullscreen.</li>
-</ol>
-<p><img alt="Change Existing Shader Graph Format" src="../images/change_existing_shader_to_fullscreen.png" /></p>
-<h2 id="blend-mode">Blend Mode</h2>
-<p>All shader blend modes are supported.</p>
-<p>However, the <strong>Alpha</strong> blend mode is recommended. This allows the selected layers to preserve alpha when compositing on top of the scene, meaning non-selected layers will still be visible underneath.</p>
-<p>To change a shader graph's blend mode, go the the Graph Inspector, find the Universal dropdown under Graph Settings, and find the Blend Mode dropdown. Change this to whatever blend mode is desired.</p>
-<p><img alt="Change Shader Graph Blend Mode" src="../images/change_shader_graph_blend_mode.png" /></p>
-<h2 id="reading-the-texture">Reading the texture</h2>
-<p>To access the Texture2D collected by the render feature, you must sample from "_BlitTexture". Other namespaces such as "_CameraColorTexture", "_MainTex", etc. will not work.</p>
-<p>When the material is attached to the render feature, _BlitTexture will contain camera output featuring <strong>only</strong> the selected layers, rendering as they normally would from the main scene camera.</p>
-<p>To create the _BlitTexture field in Shader Graph:</p>
-<ol>
-<li>Go to the window containing the Shader Graph's variables. Click the "+" button. Select Texture2D.</li>
-</ol>
-<p><img alt="Add Texture2D Node" src="../images/create_texture_2d.png" /></p>
-<ol>
-<li>Select the new variable. In the Graph Inspector window, under Node Settings, set the Name to "BlitTexture" and the Reference to "_BlitTexture" exactly as shown in the image. Ensure "Show in Inspector" is checked.</li>
-</ol>
-<p><img alt="Blit Texture Node Settings" src="../images/blit_texture_node_settings.png" /></p>
-<ol>
-<li>To use the texture in your shader, connect a BlitTexture node to the Texture(T2) field on a Texture2D node.</li>
-</ol>
-<h2 id="for-hlsl-shaders">For HLSL shaders:</h2>
-<ul>
-<li>The shader should ideally render as a fullscreen pass. Other rendering methods may cause unintended behaviour.</li>
-<li>The shader must sample from _BlitTexture. Sampling from other sources like _CameraColorTexture or _MainTex will not work.</li>
-<li>The shader should output directly to the render target.</li>
-<li>Using blend mode "Blend SrcAlpha OneMinusSrcAlpha" is recommended. Other blend modes are supported but may cause unintended effects.</li>
-</ul>
-<p>This is a minimal HLSL shader setup designed to be work with the render feature. This shader simply reads and outputs the texture with no changes. </p>
-<pre><code class="language-HLSL">Shader &quot;Example/ExampleHLSLShader&quot;
-{
-    SubShader
-    {
-        Tags { &quot;RenderPipeline&quot;=&quot;UniversalPipeline&quot; }
-
-        Pass
-        {
-            Name &quot;ExampleHLSLShader&quot;
-
-            //Set blend mode to Alpha. This allows non-selected layers to still show beneath the render feature's selected layers.
-            //Other blend modes may cause unintended side effects.
-            Blend SrcAlpha OneMinusSrcAlpha
-
-            //These settings ensure that the shader behaves as a fullscreen effect rather than a per-object material.
-            Cull Off
-            ZWrite Off
-            ZTest Always
-
-            HLSLPROGRAM
-
-            #pragma target 4.5
-            #pragma vertex Vert
-            #pragma fragment Frag
-
-            #include &quot;Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl&quot;
-
-            //Used to generate a fullscreen triangle without a mesh. 
-            struct Attributes
-            {
-                uint vertexID : SV_VertexID;
-            };
-
-            //Passes screen position and UV coordinates to the fragment shader.
-            struct Varyings
-            {
-                float4 positionCS : SV_POSITION;
-                float2 uv : TEXCOORD0;
-            };
-
-            //The sampled texture must use the _BlitTexture namespace to read information from the render feature.
-            TEXTURE2D(_BlitTexture);
-            SAMPLER(sampler_BlitTexture);
-
-            //Generates a fullscreen triangle procedurally using SV_VertexID. 
-            //Each vertex index is converted into screen-space coordinates and UVs, allowing the shader to render a full-screen effect.
-            Varyings Vert(Attributes input)
-            {
-                Varyings output;
-
-                output.uv = float2(
-                    (input.vertexID &lt;&lt; 1) &amp; 2,
-                    input.vertexID &amp; 2
-                );
-
-                output.positionCS = float4(
-                    output.uv * 2.0 - 1.0,
-                    0.0,
-                    1.0
-                );
-
-                return output;
-            }
-
-
-            half4 Frag(Varyings input) : SV_Target
-            {
-                //Flip Y UV coordinates to ensure the final effect is rendered right-side up.
-                float2 uv = input.uv;
-                uv.y = 1.0 - uv.y;
-
-                //Output the final effect.
-                return SAMPLE_TEXTURE2D(
-                    _BlitTexture,
-                    sampler_BlitTexture,
-                    uv
-                );
-            }
-
-            ENDHLSL
-        }
-    }
-}
-</code></pre>
+<h1 id="version-support">Version Support</h1>
+<p>Please refer to the following table to check version compatibility.</p>
+<p>| |Universal Render Pipeline (URP)|High Definition Render Pipeline (HDRP)|Built-in Render Pipeline|
+|---|---|---|
+|Previous releases (Unity 5 or lower)|Unsupported|Unsupported|Unsupported|
+|Unity 6000.0.79f1 (LTS)|Fully Tested and Supported|Unsupported|Unsupported|
+|Unity 6000.3.11f1 (LTS)|Fully Tested and Supported|Unsupported|Unsupported|
+|Unity 6000.5.3f1|Fully Tested and Supported|Unsupported|Unsupported|
+|Beta versions|May introduce breaking changes|Unsupported|Unsupported|</p>
 
 
 
