@@ -965,7 +965,7 @@
 fields available for configuring the render feature.</p>
 <h2 id="render-mode">Render Mode</h2>
 <ul>
-<li><strong>Hidden Camera</strong>: </li>
+<li><strong>Hidden Camera</strong> (recommended): </li>
 </ul>
 <p>Automatically configures a lightweight internal camera to
 render your selected layers. The internal camera will sync to the first correctly
@@ -979,7 +979,7 @@ LayerFX render feature).</p>
 <p>This mode can be used for most rendering setups, and is the recommended mode for
 most use cases.</p>
 <ul>
-<li><strong>Renderer List</strong>: </li>
+<li><strong>Renderer List</strong> (advanced): </li>
 </ul>
 <p>This mode functions nearly identically to the <strong>Hidden Camera</strong> mode, in that it
 renders the selected layers. The key difference is that
@@ -988,24 +988,24 @@ post processing.</p>
 <p>Use this mode when you want to render a layer or multiple layers with one or more
 materials but do <strong>not</strong> care about rendering lighting effects on these layers.</p>
 <p><strong>Key Limitations</strong>: This mode requires the selected layers to be rendered from
-an existing camera for it to correctly capture them. Therefore it is impossible to
-prevent selected layers from rendering multiple times. However, the cost of this is
-relatively small, and the improved performance of Renderer Lists will
-generally outweigh the performance implications.</p>
+an existing camera for the render feature to correctly capture them. Because objects must still 
+be rendered by another camera, they cannot be completely isolated from 
+the main scene. In most cases the additional rendering cost is small 
+and is offset by the improved efficiency of Renderer Lists.</p>
 <ul>
-<li><strong>From External Texture</strong>:</li>
+<li><strong>From External Texture</strong> (advanced):</li>
 </ul>
 <p>This mode is recommended for advanced use cases, such as isolating built-in URP
 effects to specific layers. </p>
 <p>Unlike the workflow of the other two modes, this mode
 does not give you the option to select specific layers to render. Instead, you
-must input a valid Render Texture. The Render Feature will then render the inputted
+must input a valid Render Texture. The Render Feature will then render the selected
 texture to the screen using the selected materials.</p>
-<p>Performance on this mode can vary, depending on the inputted texture's resolution.
-Rendering an additional scene camera to a Render Texture will also add additional
-performance implications.</p>
+<p>Performance on this mode can vary, depending on the selected texture's resolution.
+Rendering an additional scene camera to a Render Texture will also add a 
+performance cost.</p>
 <h2 id="pass-name">Pass Name</h2>
-<p>The inputted name is given to the Render Graph passes
+<p>The selected name is given to the Render Graph passes
 and can be used to identify a specific pass while debugging.</p>
 <h2 id="renderer-index">Renderer Index</h2>
 <p>The Renderer Index determines which renderer to render the effect with. 
@@ -1023,7 +1023,8 @@ will be rendered to the screen using the selected materials.</p>
 <p>The Materials list determines what materials the feature will render with. As many
 materials as desired can be selected, but each material will cost 
 additional performance. </p>
-<p>Materials will be applied subsequently in the order they are placed in the list.</p>
+<p>Materials are applied sequentially. 
+The output of one material pass becomes the input to the next.</p>
 <p>Any valid material will be accepted. Invalid materials may cause issues, or not
 render at all. </p>
 <p>To see the requirements for a valid material, visit the <a href="https://myth0-games.github.io/LayerMaskRendererDocs/custom-shaders-and-materials/">Custom Shaders and
@@ -1086,6 +1087,46 @@ correctly.</p>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../contents/" class="md-footer__link md-footer__link--next" aria-label="Next: Package Contents">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Package Contents
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -1111,7 +1152,7 @@ correctly.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.footer", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
