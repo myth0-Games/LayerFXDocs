@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../api-reference/">
+        <link rel="prev" href="../quick-start-guide/">
       
       
-        <link rel="next" href="../performance/">
+        <link rel="next" href="../api-reference/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Custom Shaders and Materials - LayerFX : Layer-Based Effects for URP</title>
+        <title>Custom Render Pass Setup - LayerFX : Layer-Based Effects for URP</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-custom-shaders-and-materials" class="md-skip">
+        <a href="#layerfx-render-pass-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Custom Shaders and Materials
+              Custom Render Pass Setup
             
           </span>
         </div>
@@ -312,10 +312,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../custom-render-pass-setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Render Pass Setup
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -331,6 +358,37 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -366,37 +424,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Custom Shaders and Materials
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../custom-shaders-and-materials/" class="md-nav__link">
         
   
   
@@ -412,98 +443,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#shader-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Shader Format
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Shader Format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-create-a-shader-graph-in-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To create a shader graph in this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-change-an-existing-shader-graph-to-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To change an existing shader graph to this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blend-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Blend Mode
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reading-the-texture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reading the texture
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#for-hlsl-shaders" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        For HLSL shaders:
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -616,71 +555,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shader-format" class="md-nav__link">
+  <a href="#5-minutes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Shader Format
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Shader Format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-create-a-shader-graph-in-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To create a shader graph in this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-change-an-existing-shader-graph-to-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To change an existing shader graph to this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blend-mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Blend Mode
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reading-the-texture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reading the texture
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#for-hlsl-shaders" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        For HLSL shaders:
+        (5 minutes)
       
     </span>
   </a>
@@ -704,134 +582,66 @@
 
 
 
-<h1 id="using-custom-shaders-and-materials"><strong>Using Custom Shaders and Materials</strong></h1>
-<p>Adding custom materials and shader effects to the render feature is fully supported.
-However, when adding your own custom material to the render feature, the material's shader must be set up in a specific way. </p>
-<h2 id="shader-format">Shader Format</h2>
-<p>The shader must be set up using the URP fullscreen shader format. Only URP-compatible shaders are supported.</p>
-<h3 id="to-create-a-shader-graph-in-this-format">To create a shader graph in this format:</h3>
-<ol>
-<li>Right click the project window.</li>
-<li>Create -&gt; Shader Graph -&gt; URP -&gt; Fullscreen Shader Graph</li>
-</ol>
-<p><img alt="Create Fullscreen Shader Graph" src="../images/creating_fullscreen_shader_graph.png" /></p>
-<h3 id="to-change-an-existing-shader-graph-to-this-format">To change an existing shader graph to this format:</h3>
-<ol>
-<li>In the Graph Inspector window, under the Universal dropdown, find the Material dropdown and select Fullscreen.</li>
-</ol>
-<p><img alt="Change Existing Shader Graph Format" src="../images/change_existing_shader_to_fullscreen.png" /></p>
-<h2 id="blend-mode">Blend Mode</h2>
-<p>All shader blend modes are supported.</p>
-<p>However, the <strong>Alpha</strong> blend mode is recommended. This allows the selected layers to preserve alpha when compositing on top of the scene, meaning non-selected layers will still be visible underneath.</p>
-<p>To change a shader graph's blend mode, go the the Graph Inspector, find the Universal dropdown under Graph Settings, and find the Blend Mode dropdown. Change this to whatever blend mode is desired.</p>
-<p><img alt="Change Shader Graph Blend Mode" src="../images/change_shader_graph_blend_mode.png" /></p>
-<h2 id="reading-the-texture">Reading the texture</h2>
-<p>To access the Texture2D collected by the render feature, you must sample from "_BlitTexture". Other namespaces such as "_CameraColorTexture", "_MainTex", etc. will not work.</p>
-<p>When the material is attached to the render feature, _BlitTexture will contain camera output featuring <strong>only</strong> the selected layers, rendering as they normally would from the main scene camera.</p>
-<p>To create the _BlitTexture field in Shader Graph:</p>
-<ol>
-<li>Go to the window containing the Shader Graph's variables. Click the "+" button. Select Texture2D.</li>
-</ol>
-<p><img alt="Add Texture2D Node" src="../images/create_texture_2d.png" /></p>
-<ol>
-<li>Select the new variable. In the Graph Inspector window, under Node Settings, set the Name to "BlitTexture" and the Reference to "_BlitTexture" exactly as shown in the image. Ensure "Show in Inspector" is checked.</li>
-</ol>
-<p><img alt="Blit Texture Node Settings" src="../images/blit_texture_node_settings.png" /></p>
-<ol>
-<li>To use the texture in your shader, connect a BlitTexture node to the Texture(T2) field on a Texture2D node.</li>
-</ol>
-<h2 id="for-hlsl-shaders">For HLSL shaders:</h2>
+<h1 id="layerfx-render-pass-setup"><strong>LayerFX Render Pass Setup</strong></h1>
+<h3 id="5-minutes">(5 minutes)</h3>
+<p>Setting up a custom render pass is simple. Follow these steps to get started!</p>
+<h1 id="1-scene-setup">1. Scene Setup</h1>
+<p>We'll start off with a simple scene in the editor. The player sprite is very dark against the background, so in this guide, we'll set up a blur pass on the background to make the player pop.</p>
+<p><img alt="DemoScene" src="../images/demo_scene.png" /></p>
+<p>This scene contains the default Unity Main Camera, as well as a Global Light 2D. There is also the player game object, some walls and platforms, and the background sprites.</p>
 <ul>
-<li>The shader should ideally render as a fullscreen pass. Other rendering methods may cause unintended behaviour.</li>
-<li>The shader must sample from _BlitTexture. Sampling from other sources like _CameraColorTexture or _MainTex will not work.</li>
-<li>The shader should output directly to the render target.</li>
-<li>Using blend mode "Blend SrcAlpha OneMinusSrcAlpha" is recommended. Other blend modes are supported but may cause unintended effects.</li>
+<li>Firstly, we should switch the background sprites to a separate Layer Mask. Select the parent game object, click on the layer dropdown, and change it to the desired layer mask. 
+Here, we added a layer called 'Background'. </li>
 </ul>
-<p>This is a minimal HLSL shader setup designed to be work with the render feature. This shader simply reads and outputs the texture with no changes. </p>
-<pre><code class="language-HLSL">Shader &quot;Example/ExampleHLSLShader&quot;
-{
-    SubShader
-    {
-        Tags { &quot;RenderPipeline&quot;=&quot;UniversalPipeline&quot; }
-
-        Pass
-        {
-            Name &quot;ExampleHLSLShader&quot;
-
-            //Set blend mode to Alpha. This allows non-selected layers to still show beneath the render feature's selected layers.
-            //Other blend modes may cause unintended side effects.
-            Blend SrcAlpha OneMinusSrcAlpha
-
-            //These settings ensure that the shader behaves as a fullscreen effect rather than a per-object material.
-            Cull Off
-            ZWrite Off
-            ZTest Always
-
-            HLSLPROGRAM
-
-            #pragma target 4.5
-            #pragma vertex Vert
-            #pragma fragment Frag
-
-            #include &quot;Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl&quot;
-
-            //Used to generate a fullscreen triangle without a mesh. 
-            struct Attributes
-            {
-                uint vertexID : SV_VertexID;
-            };
-
-            //Passes screen position and UV coordinates to the fragment shader.
-            struct Varyings
-            {
-                float4 positionCS : SV_POSITION;
-                float2 uv : TEXCOORD0;
-            };
-
-            //The sampled texture must use the _BlitTexture namespace to read information from the render feature.
-            TEXTURE2D(_BlitTexture);
-            SAMPLER(sampler_BlitTexture);
-
-            //Generates a fullscreen triangle procedurally using SV_VertexID. 
-            //Each vertex index is converted into screen-space coordinates and UVs, allowing the shader to render a full-screen effect.
-            Varyings Vert(Attributes input)
-            {
-                Varyings output;
-
-                output.uv = float2(
-                    (input.vertexID &lt;&lt; 1) &amp; 2,
-                    input.vertexID &amp; 2
-                );
-
-                output.positionCS = float4(
-                    output.uv * 2.0 - 1.0,
-                    0.0,
-                    1.0
-                );
-
-                return output;
-            }
-
-
-            half4 Frag(Varyings input) : SV_Target
-            {
-                //Flip Y UV coordinates to ensure the final effect is rendered right-side up.
-                float2 uv = input.uv;
-                uv.y = 1.0 - uv.y;
-
-                //Output the final effect.
-                return SAMPLE_TEXTURE2D(
-                    _BlitTexture,
-                    sampler_BlitTexture,
-                    uv
-                );
-            }
-
-            ENDHLSL
-        }
-    }
-}
-</code></pre>
+<p><img alt="ChangeLayerMask" src="../images/change_layer_mask.png" /></p>
+<p>The editor will prompt you to ask if you also want to change child layer masks. We <strong>do</strong> want all children to also be on the blurred background layer, so click 'Yes, change children.'</p>
+<ul>
+<li>
+<p>Also change your GlobalLight2D to a separate layer, so we can capture it in the render pass. Here, we made another new layer called 'Lighting'. </p>
+</li>
+<li>
+<p>You will also want to deselect your desired layers from the Main Camera's culling mask. This prevents the desired layers from rendering twice (both on the Main Camera and from the Render Feature). </p>
+</li>
+<li>
+<p>Here, we deselected the 'Background' mask, but kept the 'Lighting' mask enabled because we want the lights to affect both the blurred layers and the main layers.</p>
+</li>
+</ul>
+<p><img alt="CullingMask" src="../images/culling_mask.png" /></p>
+<h1 id="2-renderer2d-setup">2. Renderer2D Setup</h1>
+<p>Now we need to configure the render feature on the renderer. </p>
+<h2 id="locating-the-renderer2d-asset">Locating the Renderer2D asset</h2>
+<p>Find your project's Renderer2D asset. It is usually found at 'Assets/Settings/Renderer2D'.</p>
+<p>If you can't find it, first find your Universal Render Pipeline asset. This can be found by going to Edit &gt; Project Settings &gt; Quality &gt; Render Pipeline Asset.
+Once you have located your Universal asset, you can find your 2D Renderer in the Renderer list at the top of the Inspector window.</p>
+<h2 id="adding-the-render-feature">Adding the Render Feature</h2>
+<p>Scroll to the bottom of the Inspector window of your Renderer2D asset, and click 'Add Render Feature'.</p>
+<p><img alt="AddRenderFeature" src="../images/add_render_feature.png" /></p>
+<p>Select <strong>'Layer FX Render Feature'.</strong></p>
+<p><img alt="AddLayerFXRenderFeature" src="../images/add_layerfx_render_feature.png" /></p>
+<h2 id="configuring-the-render-feature">Configuring the Render Feature</h2>
+<p>Now we must configure the settings of the render feature.</p>
+<ul>
+<li><strong>Pass Name:</strong> Set to whatever you want. This internally names the render pass for debugging purposes. Here we'll name it 'BackgroundBlurPass'.</li>
+<li><strong>Renderer Index:</strong> This selects what renderer the render feature should render on. To see the list of available renderers, look at the Renderer List field in your Universal Renderer asset. 
+For most cases, leave this field set to 0.
+Here we will set it to 1, as 2D renderer we are using is at index 0.</li>
+<li><strong>Rendering Order:</strong> This determines at what point during the rendering process the feature will render at. Select <strong>BeforeRenderingOpaques</strong> to render behind the main scene layers, or
+<strong>AfterRenderTransparents</strong> to render on top of the main scene. As we are trying to blur the background, we will set it to <strong>BeforeRenderingOpaques</strong>.</li>
+<li><strong>Tex:</strong> Here, you can select a texture to render from as an alternative to rendering from a Layer Mask. This is useful for rendering layers with post processing effects. Leave this field
+blank to render from the selected layers. In this tutorial, we will leave it blank as we want to render from the Background Layer Mask.</li>
+<li><strong>Materials:</strong> Select 1 or more materials to render the desired layers with. Selecting more than one materials will stack the materials in the listed order.
+This allows for fancy effects that combine other effects, or multi-pass effects. In this tutorial, we are creating a 2-pass blur to save performance.
+We will add two blur materials, one that blurs horizontally and one that blurs vertically.</li>
+<li><strong>Capture Layers:</strong> This is where we select the layers that the effect should be applied to. Here we will select the 'Background' and 'Lighting' layers.
+Not selecting the lighting layers will cause it to render only black if you have selected a Sprite-Lit material!</li>
+<li><strong>Downscaling:</strong> Downscales the texture to save performance. In this guide, we will select 2x, because there will be minimal visual impact due to blurring the layers.</li>
+<li><strong>Render In Scene View</strong>: Enable this to render the effect in scene view.</li>
+<li><strong>Hidden Layers:</strong> If Render In Scene View is enabled, this determines what layers will <strong>not</strong> render in scene view.</li>
+</ul>
+<p>These are the final configured settings:</p>
+<p><img alt="FinalSettings" src="../images/final_settings.png" /></p>
+<p>Now hit Play and watch the effect! Our blur effect turned out really well, and now the player is much more visible against the noisy background. </p>
+<p><img alt="BlurEffect" src="../images/blur_effect.png" /></p>
 
 
 
@@ -861,7 +671,7 @@ However, when adding your own custom material to the render feature, the materia
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../api-reference/" class="md-footer__link md-footer__link--prev" aria-label="Previous: API Reference">
+          <a href="../quick-start-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Quick Start">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -871,20 +681,20 @@ However, when adding your own custom material to the render feature, the materia
                 Previous
               </span>
               <div class="md-ellipsis">
-                API Reference
+                Quick Start
               </div>
             </div>
           </a>
         
         
           
-          <a href="../performance/" class="md-footer__link md-footer__link--next" aria-label="Next: Performance">
+          <a href="../api-reference/" class="md-footer__link md-footer__link--next" aria-label="Next: API Reference">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Performance
+                API Reference
               </div>
             </div>
             <div class="md-footer__button md-icon">
