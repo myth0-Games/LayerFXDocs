@@ -1,4 +1,13 @@
-site_name: Layer Mask Docs
+site_name: 'LayerFX : Layer-Based Effects for URP'
+nav:
+  - Home: index.md
+  - Package Contents: contents.md
+  - Quick Start: quick-start-guide.md
+  - API Reference: api-reference.md
+  - Custom Shaders and Materials: custom-shaders-and-materials.md
+  - Performance: performance.md
+  - FAQ: faq-and-troubleshooting.md
+  - Version Support: version-support.md
 theme:
   name: material
 
@@ -17,9 +26,9 @@ theme:
         name: Light mode
 
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
+    - navigation.footer
     - content.code.copy
     - search.suggest
     - search.highlight

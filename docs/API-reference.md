@@ -5,7 +5,7 @@ fields available for configuring the render feature.
 
 ## Render Mode
 
-- **Hidden Camera**: 
+- **Hidden Camera** (recommended): 
 
 Automatically configures a lightweight internal camera to
 render your selected layers. The internal camera will sync to the first correctly
@@ -22,7 +22,7 @@ LayerFX render feature).
 This mode can be used for most rendering setups, and is the recommended mode for
 most use cases.
 
-- **Renderer List**: 
+- **Renderer List** (advanced): 
 
 This mode functions nearly identically to the **Hidden Camera** mode, in that it
 renders the selected layers. The key difference is that
@@ -33,28 +33,28 @@ Use this mode when you want to render a layer or multiple layers with one or mor
 materials but do **not** care about rendering lighting effects on these layers.
 
 **Key Limitations**: This mode requires the selected layers to be rendered from
-an existing camera for it to correctly capture them. Therefore it is impossible to
-prevent selected layers from rendering multiple times. However, the cost of this is
-relatively small, and the improved performance of Renderer Lists will
-generally outweigh the performance implications.
+an existing camera for the render feature to correctly capture them. Because objects must still 
+be rendered by another camera, they cannot be completely isolated from 
+the main scene. In most cases the additional rendering cost is small 
+and is offset by the improved efficiency of Renderer Lists.
 
-- **From External Texture**:
+- **From External Texture** (advanced):
 
 This mode is recommended for advanced use cases, such as isolating built-in URP
 effects to specific layers. 
 
 Unlike the workflow of the other two modes, this mode
 does not give you the option to select specific layers to render. Instead, you
-must input a valid Render Texture. The Render Feature will then render the inputted
+must input a valid Render Texture. The Render Feature will then render the selected
 texture to the screen using the selected materials.
 
-Performance on this mode can vary, depending on the inputted texture's resolution.
-Rendering an additional scene camera to a Render Texture will also add additional
-performance implications.
+Performance on this mode can vary, depending on the selected texture's resolution.
+Rendering an additional scene camera to a Render Texture will also add a 
+performance cost.
 
 ## Pass Name
 
-The inputted name is given to the Render Graph passes
+The selected name is given to the Render Graph passes
 and can be used to identify a specific pass while debugging.
 
 ## Renderer Index
@@ -82,7 +82,8 @@ The Materials list determines what materials the feature will render with. As ma
 materials as desired can be selected, but each material will cost 
 additional performance. 
 
-Materials will be applied subsequently in the order they are placed in the list.
+Materials are applied sequentially. 
+The output of one material pass becomes the input to the next.
 
 Any valid material will be accepted. Invalid materials may cause issues, or not
 render at all. 
