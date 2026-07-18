@@ -1,6 +1,7 @@
 # Quick Start Guide
+### (2 Minutes)
 
-This guide will cover everyting you need to know when importing LayerFX for the
+This guide will cover everything you need to know when importing LayerFX for the
 first time, including how to view and set up the included demo scene.
 
 ## Package Structure
@@ -38,12 +39,11 @@ field under the **Rendering** dropdown.
 
 ![Select LayerFX Renderer](images/select_layerfx_renderer.png)
 
-6. The demo scene is now ready to play! Hit the play button, and cycle
-through the included sample materials to view LayerFX in action!
+6. The demo scene is now ready. Press Play and use the Previous/Next buttons
+to cycle through the included effects.
 
-For the purposes of your own project, you do not need to use the 
-LayerFXSample2DRenderer. It is included for ease of use when setting up the demo
-scene. 
+The included sample renderer is preconfigured with LayerFX so you can try the
+demo scene immediately. Your own project does not need to use this renderer.
 
 For detailed instructions on configuring your own renderer with LayerFX, please 
 visit the [Custom Render Pass Setup Page.](https://myth0-games.github.io/LayerFXDocs/custom-render-pass-setup/)
