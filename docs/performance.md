@@ -3,7 +3,7 @@
 Extensive performance testing has been conducted on the asset using integrated graphics.
 Tests were done with shadows turned off in the render feature settings.
 
-As the data below indicates, when rendering a large amount of sprites, the render feature may render them faster than the main camera due to stripped-down rendering settings.
+As the data below indicates, when rendering a large amount of sprites, the render feature may render them more efficiently than the main camera due to stripped-down rendering settings.
 Frames may take longer or shorter to render depending on the complexity of the selected material.
 
 | Number of sprites on screen | Median frame time with sprites rendering from main scene camera (ms) | Median frame time with sprites rendering through the render feature using a simple material (ms) |
@@ -13,6 +13,15 @@ Frames may take longer or shorter to render depending on the complexity of the s
 | 500 | 3.19 | 2.671 |
 | 1000 | 5.333 | 4.179 |
 | 2000 | 9.498 | 5.742 |
+
+Tests were conducted with the following specs.
+
+ - **Hardware:** Ryzen 7 5800H integrated graphics
+ - **Resolution:** 1080p
+ - **Unity Version:** Unity 6000.3.11f1
+ - **Platform:** Windows
+
+Your exact numbers may vary on different hardware, resolution, versions, or platforms.
 
 ## Boosting Performance
 

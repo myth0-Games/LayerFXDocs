@@ -94,7 +94,7 @@ documentation.
 
 ## Capture Layers
 
-These are the layers that will be rendered by the render feature. If rendering using 
+These are the layers that will be rendered by the render feature. If rendering objects using 
 lit shaders, ensure a layer with a global light or other lighting is selected.
 Otherwise, the layers may render completely black. 
 

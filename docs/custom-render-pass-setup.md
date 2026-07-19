@@ -1,7 +1,7 @@
 # **LayerFX Render Feature Setup**
 ### (5 minutes)
 
-Setting up your own custom render pass is simple. Follow these steps to get started!
+Setting up your own LayerFX render feature is simple. Follow these steps to get started!
 
 # 1. Scene Setup
 
@@ -18,7 +18,7 @@ Here, we added a layer called 'Background'.
 
 **Note:** If your background is organized under a parent object, choose 'Yes, Change Children' so every child object is moved to the new layer.
 
-- Also change your GlobalLight2D to a separate layer, so we can capture it in the render pass. Here, we created a layer called 'Lighting'. 
+- Also change your Global Light 2D to a separate layer, so we can capture it in the render feature. Here, we created a layer called 'Lighting'. 
 
 - You will also want to deselect your desired layers from the Main Camera's culling mask. This prevents the desired layers from rendering twice (both on the Main Camera and from the Render Feature). 
 
@@ -34,8 +34,9 @@ Now we need to configure the render feature on the renderer.
 
 Locate your project's Renderer2D asset.
 
-If you can't find it, first find your Universal Render Pipeline asset. This can be found by going to Edit > Project Settings > Quality > Render Pipeline Asset.
-Once you have located your Universal asset, you can find your 2D Renderer in the Renderer list at the top of the Inspector window.
+If you can't find it, first find your Universal Render Pipeline asset. This can be found by going to **Edit > Project Settings > Quality > Render Pipeline Asset**.
+
+Once you have located your Universal Render Pipeline Asset, the Renderer List field at the top of the Inspector contains your project's Renderer2D assets.
 
 
 ## Adding the Render Feature
@@ -54,18 +55,18 @@ Now we must configure the settings of the render feature.
 
 - **Render Mode:** This determines **how** LayerFX will render. Here, we will 
 select **Hidden Camera**, because this mode is recommended for most projects and
-will allow us to isolate the blur to only the background layers.
-- **Pass Name:** Set to whatever you want. This internally names the render pass for debugging purposes. Here we'll name it 'BackgroundBlurPass'.
+will allow us to apply the blur only to the selected background layers.
+- **Pass Name:** Set to whatever you want. This names the internal LayerFX render passes for debugging purposes. Here we'll name it 'BackgroundBlurPass'.
 - **Renderer Index:** This selects what renderer the render feature should render on. To see the list of available renderers, look at the Renderer List field in your Universal Renderer asset. 
 For most cases, you can leave this field set to 0. For this guide, we can leave it
 at 0.
-- **Rendering Order:** This determines at what point during the rendering process the feature will render at. For most 2D projects, you can
+- **Rendering Order:** This determines when during the rendering pipeline the feature will execute. For most 2D projects, you can
 select **BeforeRenderingOpaques** to render behind the main scene layers, or
 **AfterRenderTransparents** to render on top of the main scene. As we are trying to blur the background, we will set it to **BeforeRenderingOpaques**.
 - **Material Stack:** Select 1 or more materials to render the desired layers with. Selecting more than one material will stack the materials in the listed order.
 This allows users to combine multiple effects, or make multi-pass effects. In this tutorial, we are creating a 2-pass blur to save performance.
 We will add two blur materials, one that blurs horizontally and one that blurs vertically. 
-These materials used in this guide can be found in the LayerFX package at 
+The materials used in this guide can be found in the LayerFX package at 
 **Assets/LayerFX/Samples/Materials/ShaderGraph/Gaussian Blur/**.
 - **Capture Layers:** This is where we select the layers that the effect should be applied to. Here we will select the 'Background' and 'Lighting' layers.
 - **Downscaling:** Downscales the texture to save performance. In this guide, we will select 2x, because there will be minimal visual impact due to blurring the layers.

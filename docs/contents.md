@@ -5,8 +5,8 @@ The LayerFX package contains the following:
 - The **LayerFX Render Feature**, supporting 3 different rendering modes and a wide
 variety of customization options. Full source code is included, allowing advanced
 users to inspect, debug, and customize the render feature if needed.
-- A **custom editor script** for the render feature to make configuring user 
-settings easy and manageable.
+- A **custom editor script** for the render feature to make configuring LayerFX settings easy
+and manageable.
 - **Demo Content** including:
     - A preconfigured 2D Renderer set up with LayerFX.
     - 7 sample shaders, set up for easy use with LayerFX, including both an HLSL
@@ -54,7 +54,7 @@ runtime code required for LayerFX to function.
 
 ## Editor
 
-Contains editor scripts nessecary for functionality such as inspector warnings, 
+Contains editor scripts necessary for functionality such as inspector warnings, 
 inspector organization, and easy material stack reordering.
 
 ✅ **Required**
@@ -86,4 +86,4 @@ Contains links to online documentation. This file can be safely deleted.
 
 All LayerFX files can be moved to different locations within the Assets 
 folder without affecting functionality, provided the 
-**Runtime** and **Editor** folders remain in the project.
+**Runtime** and **Editor** folders remain intact.

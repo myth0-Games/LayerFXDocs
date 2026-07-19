@@ -24,7 +24,7 @@ All shader blend modes are supported.
 
 However, the **Alpha** blend mode is recommended. This allows the selected layers to preserve alpha when compositing on top of the scene, meaning non-selected layers will still be visible underneath.
 
-To change a shader graph's blend mode, go the the Graph Inspector, find the Universal dropdown under Graph Settings, and find the Blend Mode dropdown. Change this to whatever blend mode is desired.
+To change a shader graph's blend mode, go to the Graph Inspector, find the Universal dropdown under Graph Settings, and find the Blend Mode dropdown. Change this to whatever blend mode is desired.
 
 ![Change Shader Graph Blend Mode](images/change_shader_graph_blend_mode.png)
 
@@ -32,7 +32,7 @@ To change a shader graph's blend mode, go the the Graph Inspector, find the Univ
 
 To access the Texture2D collected by the render feature, you must sample from "_BlitTexture". Other namespaces such as "_CameraColorTexture", "_MainTex", etc. will not work.
 
-When the material is attached to the render feature, _BlitTexture will contain camera output featuring **only** the selected layers, rendering as they normally would from the main scene camera.
+When the material is attached to the render feature, _BlitTexture will contain the rendered output of the selected layers.
 
 To create the _BlitTexture field in Shader Graph:
 
@@ -53,7 +53,7 @@ To create the _BlitTexture field in Shader Graph:
 - The shader should output directly to the render target.
 - Using blend mode "Blend SrcAlpha OneMinusSrcAlpha" is recommended. Other blend modes are supported but may cause unintended effects.
 
-This is a minimal HLSL shader setup designed to be work with the render feature. This shader simply reads and outputs the texture with no changes. 
+This is a minimal HLSL shader setup designed to work with the render feature. This shader simply reads and outputs the texture with no changes. 
 
 ```HLSL
 Shader "Example/ExampleHLSLShader"
