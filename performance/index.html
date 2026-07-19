@@ -610,10 +610,11 @@
 
 
 <h1 id="performance"><strong>Performance</strong></h1>
-<p>Extensive performance testing has been conducted on the asset using integrated graphics.
+<p>Extensive performance testing has been conducted on the asset using integrated graphics to 
+evaluate performance on lower-end hardware.
 Tests were done with shadows turned off in the render feature settings.</p>
-<p>As the data below indicates, when rendering a large amount of sprites, the render feature may render them more efficiently than the main camera due to stripped-down rendering settings.
-Frames may take longer or shorter to render depending on the complexity of the selected material.</p>
+<p>As the data below indicates, when rendering a large amount of sprites, the render feature may render large numbers of sprites more efficiently than the main camera due to its simplified rendering settings.
+Frame times may vary depending on the complexity of the selected material.</p>
 <table>
 <thead>
 <tr>
@@ -652,20 +653,24 @@ Frames may take longer or shorter to render depending on the complexity of the s
 </table>
 <p>Tests were conducted with the following specs.</p>
 <ul>
-<li><strong>Hardware:</strong> Ryzen 7 5800H integrated graphics</li>
+<li><strong>GPU:</strong> Ryzen 7 5800H integrated graphics</li>
 <li><strong>Resolution:</strong> 1080p</li>
 <li><strong>Unity Version:</strong> Unity 6000.3.11f1</li>
-<li><strong>Platform:</strong> Windows</li>
+<li><strong>Platform:</strong> Windows 11</li>
 </ul>
 <p>Your exact numbers may vary on different hardware, resolution, versions, or platforms.</p>
 <h2 id="boosting-performance">Boosting Performance</h2>
 <ul>
-<li><strong>The #1 way to boost the performance of the render feature is by enabling Downscaling.</strong> To change the Downscaling value, go to the render feature's settings and edit the Downscaling field. For large performance gains with minimal visual change, set Downscaling to 2x. Values larger than 2x may cause negative visual effects, though performance will improve dramatically with each downscaling increase.</li>
+<li><strong>The #1 way to boost the performance of the render feature is by enabling Downscaling.</strong> 
+To change the Downscaling value, go to the render feature's settings and edit the Downscaling
+field. For large performance gains with minimal visual change, set Downscaling to 2x. 
+Values larger than 2x may reduce visual quality, but can provide significant additional 
+performance improvements.</li>
 </ul>
 <p><img alt="Downscaling Slider" src="../images/downscaling_slider.png" /></p>
 <ul>
 <li>The selected material will also greatly impact performance. Optimize more intensive materials to ensure good performance. Less intensive materials will have negligible performance impact.</li>
-<li>Limit the amount of instances of the render feature. Multiple instances <strong>are</strong> supported, however the more that are running at once, the worse the performance will be.</li>
+<li>Limit the number of instances of the render feature. Multiple instances <strong>are</strong> supported, however they will reduce performance.</li>
 </ul>
 
 
