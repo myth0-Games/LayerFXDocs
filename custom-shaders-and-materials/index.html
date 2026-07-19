@@ -743,9 +743,7 @@ However, when adding your own custom material to the render feature, the materia
 </ol>
 <p><img alt="Create Fullscreen Shader Graph" src="../images/creating_fullscreen_shader_graph.png" /></p>
 <h3 id="to-change-an-existing-shader-graph-to-this-format">To change an existing shader graph to this format:</h3>
-<ol>
-<li>In the Graph Inspector window, under the Universal dropdown, find the Material dropdown and select Fullscreen.</li>
-</ol>
+<p>In the Graph Inspector window, under the Universal dropdown, find the Material dropdown and select Fullscreen.</p>
 <p><img alt="Change Existing Shader Graph Format" src="../images/change_existing_shader_to_fullscreen.png" /></p>
 <h2 id="blend-mode">Blend Mode</h2>
 <p>All shader blend modes are supported.</p>
@@ -756,17 +754,11 @@ However, when adding your own custom material to the render feature, the materia
 <p>To access the Texture2D collected by the render feature, you must sample from "_BlitTexture". Other namespaces such as "_CameraColorTexture", "_MainTex", etc. will not work.</p>
 <p>When the material is attached to the render feature, _BlitTexture will contain the rendered output of the selected layers.</p>
 <p>To create the _BlitTexture field in Shader Graph:</p>
-<ol>
-<li>Go to the window containing the Shader Graph's variables. Click the "+" button. Select Texture2D.</li>
-</ol>
+<p>1. Go to the window containing the Shader Graph's variables. Click the "+" button. Select Texture2D.</p>
 <p><img alt="Add Texture2D Node" src="../images/create_texture_2d.png" /></p>
-<ol>
-<li>Select the new variable. In the Graph Inspector window, under Node Settings, set the Name to "BlitTexture" and the Reference to "_BlitTexture" exactly as shown in the image. Ensure "Show in Inspector" is checked.</li>
-</ol>
+<p>2. Select the new variable. In the Graph Inspector window, under Node Settings, set the Name to "BlitTexture" and the Reference to "_BlitTexture" exactly as shown in the image. Ensure "Show in Inspector" is checked.</p>
 <p><img alt="Blit Texture Node Settings" src="../images/blit_texture_node_settings.png" /></p>
-<ol>
-<li>To use the texture in your shader, connect a BlitTexture node to the Texture(T2) field on a Texture2D node.</li>
-</ol>
+<p>3. To use the texture in your shader, connect a BlitTexture node to the Texture(T2) field on a Texture2D node.</p>
 <h2 id="for-hlsl-shaders">For HLSL shaders:</h2>
 <ul>
 <li>The shader should ideally render as a fullscreen pass. Other rendering methods may cause unintended behaviour.</li>
