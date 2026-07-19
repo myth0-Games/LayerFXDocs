@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../contents/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../custom-render-pass-setup/">
+        <link rel="next" href="../contents/">
       
       
         
@@ -258,33 +258,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../contents/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Package Contents
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -359,6 +332,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#package-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -384,6 +368,33 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Package Contents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -550,6 +561,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license-info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License Information
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -581,6 +619,17 @@
     <span class="md-ellipsis">
       
         (2 Minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
       
     </span>
   </a>
@@ -630,44 +679,38 @@
 <h3 id="2-minutes">(2 Minutes)</h3>
 <p>This guide will cover everything you need to know when importing LayerFX for the
 first time, including how to view and set up the included demo scene.</p>
+<h2 id="installation">Installation</h2>
+<p>Before installing LayerFX, ensure your project is on a <a href="https://myth0-games.github.io/LayerFXDocs/version-support/">supported version</a>.
+Ensure your project is using the URP pipeline. HDRP and the 
+Built-In Render Pipeline are not supported.</p>
+<ol>
+<li>Import the LayerFX.unitypackage file into your project.</li>
+<li>Wait for the project to compile.</li>
+</ol>
 <h2 id="package-structure">Package Structure</h2>
 <p>Please visit the <a href="https://myth0-games.github.io/LayerFXDocs/contents/">Package Contents Page</a>
-to familiarlize yourself with the package folder structure and what files may be 
+to familiarize yourself with the package folder structure and what files may be 
 safely removed from your project.</p>
 <h2 id="setting-up-the-demo-scene">Setting Up the Demo Scene</h2>
-<p>To properly view LayerFX in action through the demo scene, an extra setup step is
+<p>To properly view LayerFX in action through the demo scene, a few additional setup steps are
 required. Follow these steps to get started!</p>
-<ol>
-<li>Navigate in the Project Window to <strong>Assets/LayerFX/Samples/Scenes/</strong>.</li>
-</ol>
+<p>1. Navigate in the Project Window to <strong>Assets/LayerFX/Samples/Scenes/</strong>.</p>
 <p><img alt="Demo Scene File Path" src="../images/demo_scene_file_path.png" /></p>
-<ol>
-<li>Drag the <strong>LayerFXDemoScene</strong> into the Hierarchy window. For best results,
-temporarily remove other scenes from the Hierarchy window.</li>
-</ol>
+<p>2. Drag the <strong>LayerFXDemoScene</strong> into the Hierarchy window. For best results,
+temporarily remove other scenes from the Hierarchy window.</p>
 <p><img alt="Demo Scene In Hierarchy" src="../images/demo_scene_in_hierarchy.png" /></p>
-<ol>
-<li>
-<p>To properly view the LayerFX demo scene in action, the LayerFX sample renderer 
+<p>3. To properly view the LayerFX demo scene in action, the LayerFX sample renderer 
 must be attached to your project's URP asset. To find your URP asset, go to
 <strong>Edit &gt; Project Settings &gt; Quality &gt; Render Pipeline Asset</strong> and click on the
 URP asset.</p>
-</li>
-<li>
-<p>Once you have located your project's active URP asset, find the <strong>Renderer List</strong>
+<p>4. Once you have located your project's active URP asset, find the <strong>Renderer List</strong>
 field under the <strong>Rendering</strong> dropdown.</p>
-</li>
-</ol>
 <p><img alt="URP Asset Renderer List Field" src="../images/urp_data_renderer_list_field.png" /></p>
-<ol>
-<li>Add another renderer to the Renderer List field. Select the
-<strong>LayerFXSample2DRenderer</strong>. Set this to the default renderer.</li>
-</ol>
+<p>5. Add another renderer to the Renderer List field. Select the
+<strong>LayerFXSample2DRenderer</strong>. Set this renderer as the default renderer.</p>
 <p><img alt="Select LayerFX Renderer" src="../images/select_layerfx_renderer.png" /></p>
-<ol>
-<li>The demo scene is now ready. Press Play and use the Previous/Next buttons
-to cycle through the included effects.</li>
-</ol>
+<p>6. The demo scene is now ready. Press Play and use the Previous/Next buttons
+to cycle through the included effects.</p>
 <p>The included sample renderer is preconfigured with LayerFX so you can try the
 demo scene immediately. Your own project does not need to use this renderer.</p>
 <p>For detailed instructions on configuring your own renderer with LayerFX, please 
@@ -701,7 +744,7 @@ visit the <a href="https://myth0-games.github.io/LayerFXDocs/custom-render-pass-
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../contents/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Package Contents">
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -711,20 +754,20 @@ visit the <a href="https://myth0-games.github.io/LayerFXDocs/custom-render-pass-
                 Previous
               </span>
               <div class="md-ellipsis">
-                Package Contents
+                Home
               </div>
             </div>
           </a>
         
         
           
-          <a href="../custom-render-pass-setup/" class="md-footer__link md-footer__link--next" aria-label="Next: Custom Render Pass Setup">
+          <a href="../contents/" class="md-footer__link md-footer__link--next" aria-label="Next: Package Contents">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Custom Render Pass Setup
+                Package Contents
               </div>
             </div>
             <div class="md-footer__button md-icon">
