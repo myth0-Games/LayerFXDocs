@@ -1,6 +1,6 @@
 # License
 
-Copyright © 2026 Myth0 Games.
+Copyright &copy; 2026 Myth0 Games.
 
 All rights reserved.
 

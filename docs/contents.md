@@ -40,6 +40,8 @@ Assets
     │   ├── Shaders
     │   └── Sprites
     │
+    ├── Documentation~
+    │
     └── README.txt
 ```
 
@@ -78,9 +80,13 @@ Once you have finished exploring the sample content, the entire
 **Assets/LayerFX/Samples** folder can be safely deleted. 
 None of the files in this folder are required for LayerFX to function.
 
+## Documentation
+
+Contains full offline markdown documentation.
+
 ## README.txt
 
-Contains links to online documentation. This file can be safely deleted.
+Contains links to online documentation.
 
 ## File Organization
 

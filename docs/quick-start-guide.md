@@ -6,7 +6,7 @@ first time, including how to view and set up the included demo scene.
 
 ## Installation
 
-Before installing LayerFX, ensure your project is on a [supported version](https://myth0-games.github.io/LayerFXDocs/version-support/).
+Before installing LayerFX, ensure your project is on a [supported version](version-support.md).
 Ensure your project is using the URP pipeline. HDRP and the 
 Built-In Render Pipeline are not supported.
 
@@ -15,7 +15,7 @@ Built-In Render Pipeline are not supported.
 
 ## Package Structure
 
-Please visit the [Package Contents Page](https://myth0-games.github.io/LayerFXDocs/contents/)
+Please visit the [Package Contents Page](contents.md)
 to familiarize yourself with the package folder structure and what files may be 
 safely removed from your project.
 
@@ -55,4 +55,4 @@ The included sample renderer is preconfigured with LayerFX so you can try the
 demo scene immediately. Your own project does not need to use this renderer.
 
 For detailed instructions on configuring your own renderer with LayerFX, please 
-visit the [Custom Render Pass Setup Page.](https://myth0-games.github.io/LayerFXDocs/custom-render-pass-setup/)
+visit the [Custom Render Pass Setup Page.](custom-render-pass-setup.md)

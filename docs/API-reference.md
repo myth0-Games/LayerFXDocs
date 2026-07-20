@@ -5,29 +5,37 @@ fields available for configuring the render feature.
 
 ## Render Mode
 
+**Code Reference:** `LayerFXRenderFeature.settings.renderMode`
+
+**Type:** `LayerFXRenderFeature.RenderMode`
+
 - **Hidden Camera** (recommended): 
+
+`RenderMode.hiddenCamera`
 
 Automatically configures a lightweight internal camera to
 render your selected layers. The internal camera will sync to the first correctly
 tagged camera (see the **Camera Tag** field). 
 
-This mode fully supports URP lighting, shadows, and post processing.
+This mode fully supports URP lighting, shadows, and post-processing.
 
 This mode fully captures selected layers regardless of whether any scene cameras
 are already rendering the selected layers. To render specific objects with special
 effects, it is recommended to disable these layers from any other scene cameras so
-they do not render multiple times (e.g. Both from the scene camera **and** the 
+they do not render multiple times (e.g. both from the scene camera **and** the 
 LayerFX render feature).
 
 This mode can be used for most rendering setups, and is the recommended mode for
 most use cases.
 
-- **Renderer List** (advanced): 
+- **Renderer List** (advanced):
+
+`RenderMode.rendererList`
 
 This mode functions nearly identically to the **Hidden Camera** mode, in that it
 renders the selected layers. The key difference is that
-it is slightly more performant, but does **not** support URP lighting, shadows and
-post processing.
+it is slightly more efficient, but does **not** support URP lighting, shadows, and
+post-processing.
 
 Use this mode when you want to render a layer or multiple layers with one or more
 materials but do **not** care about rendering lighting effects on these layers.
@@ -39,6 +47,8 @@ the main scene. In most cases the additional rendering cost is small
 and is offset by the improved efficiency of Renderer Lists.
 
 - **From External Texture** (advanced):
+
+`RenderMode.fromExternalTexture`
 
 This mode is recommended for advanced use cases, such as isolating built-in URP
 effects to specific layers. 
@@ -54,15 +64,27 @@ performance cost.
 
 ## Pass Name
 
+**Code Reference:** `LayerFXRenderFeature.settings.passName`
+
+**Type:** `string`
+
 The selected name is given to the Render Graph passes
 and can be used to identify a specific pass while debugging.
 
 ## Renderer Index
 
+**Code Reference:** `LayerFXRenderFeature.settings.rendererIndex`
+
+**Type:** `int`
+
 The Renderer Index determines which renderer to render the effect with. 
 Your project's list of renderers can be found in the project's URP asset. 
 
 ## Rendering Order
+
+**Code Reference:** `LayerFXRenderFeature.settings.renderingOrder`
+
+**Type:** `RenderPassEvent`
 
 Rendering Order determines where in the pipeline the effect will render. This can
 be used to render the effect on top of or below other objects. 
@@ -73,10 +95,18 @@ other sprites.
 
 ## Render Texture
 
-If using the **From External Texture** rendering mode, this is the texture that
-will be rendered to the screen using the selected materials.
+**Code Reference:** `LayerFXRenderFeature.settings.renderTexture`
+
+**Type:** `RenderTexture`
+
+If using the **From External Texture** rendering mode, this is the texture that will be 
+processed by the selected materials and composited onto the screen.
 
 ## Materials
+
+**Code Reference:** `LayerFXRenderFeature.settings.materials`
+
+**Type:** `List<Material>`
 
 The Materials list determines what materials the feature will render with. As many
 materials as desired can be selected, but each material will cost 
@@ -89,10 +119,14 @@ Any valid material will be accepted. Invalid materials may cause issues, or not
 render at all. 
 
 To see the requirements for a valid material, visit the [Custom Shaders and
-Materials](https://myth0-games.github.io/LayerMaskRendererDocs/custom-shaders-and-materials/)
+Materials](custom-shaders-and-materials.md)
 documentation.
 
 ## Capture Layers
+
+**Code Reference:** `LayerFXRenderFeature.settings.captureLayers`
+
+**Type:** `LayerMask`
 
 These are the layers that will be rendered by the render feature. If rendering objects using 
 lit shaders, ensure a layer with a global light or other lighting is selected.
@@ -100,16 +134,23 @@ Otherwise, the layers may render completely black.
 
 ## Downscaling
 
-Increasing this value will cause the feature to be more performant at the cost of
-visual quality. 
+**Code Reference:** `LayerFXRenderFeature.settings.downscaling`
+
+**Type:** `int`
+
+Increasing this value improves performance at the cost of image quality.
 
 For many effects, a downscaling value of 2-4 will have little visual
 impact but will massively improve performance.
 
-Higher downscaling values will most likely have a negative visual effect, but can be
+Higher downscaling values will visibly reduce image quality, but can be
 used to make pixelated effects. 
 
 ## Render in Scene View
+
+**Code Reference:** `LayerFXRenderFeature.settings.renderInSceneView`
+
+**Type:** `bool`
 
 This value determines whether or not the render feature will render in Scene View.
 
@@ -126,7 +167,11 @@ setting when using the **From External Texture** mode.
 
 ## Color Buffer Format
 
-Select HDR or LDR color formats.
+**Code Reference:** `LayerFXRenderFeature.settings.colorBufferFormat`
+
+**Type:** `LayerFXRenderFeature.BufferFormatMode`
+
+Select `HDR` or `LDR` color formats.
 
 If LDR is selected, the effect will render with **R8G8B8A8_SRGB**.
 
@@ -134,10 +179,18 @@ If HDR is selected, the effect will render with **R16G16B16A16_SFloat**.
 
 ## Filter Mode
 
+**Code Reference:** `LayerFXRenderFeature.settings.filterMode`
+
+**Type:** `FilterMode`
+
 Determines whether the effect will render with Point, Bilinear, or Trilinear
 filtering.
 
 ## Camera Tag
+
+**Code Reference:** `LayerFXRenderFeature.settings.cameraTag`
+
+**Type:** `string`
 
 When using the **Hidden Camera** rendering mode, the internal camera will sync
 itself to the first camera to render with this tag. 

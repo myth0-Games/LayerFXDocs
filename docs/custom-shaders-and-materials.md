@@ -14,7 +14,7 @@ The shader must be set up using the URP fullscreen shader format. Only URP-compa
 ![Create Fullscreen Shader Graph](images/creating_fullscreen_shader_graph.png)
 
 ### To change an existing shader graph to this format:
-1. In the Graph Inspector window, under the Universal dropdown, find the Material dropdown and select Fullscreen.
+In the Graph Inspector window, under the Universal dropdown, find the Material dropdown and select Fullscreen.
 
 ![Change Existing Shader Graph Format](images/change_existing_shader_to_fullscreen.png)
 
@@ -36,15 +36,15 @@ When the material is attached to the render feature, _BlitTexture will contain t
 
 To create the _BlitTexture field in Shader Graph:
 
-1. Go to the window containing the Shader Graph's variables. Click the "+" button. Select Texture2D.
+1\. Go to the window containing the Shader Graph's variables. Click the "+" button. Select Texture2D.
 
 ![Add Texture2D Node](images/create_texture_2d.png)
 
-2. Select the new variable. In the Graph Inspector window, under Node Settings, set the Name to "BlitTexture" and the Reference to "_BlitTexture" exactly as shown in the image. Ensure "Show in Inspector" is checked.
+2\. Select the new variable. In the Graph Inspector window, under Node Settings, set the Name to "BlitTexture" and the Reference to "_BlitTexture" exactly as shown in the image. Ensure "Show in Inspector" is checked.
 
 ![Blit Texture Node Settings](images/blit_texture_node_settings.png)
 
-3. To use the texture in your shader, connect a BlitTexture node to the Texture(T2) field on a Texture2D node.
+3\. To use the texture in your shader, connect a BlitTexture node to the Texture(T2) field on a Texture2D node.
 
 ## For HLSL shaders:
 
