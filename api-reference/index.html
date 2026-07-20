@@ -855,27 +855,31 @@
 <p>The following page contains detailed information about the different settings and
 fields available for configuring the render feature.</p>
 <h2 id="render-mode">Render Mode</h2>
+<p><strong>Code Reference:</strong> <code>LayerFXRenderFeature.settings.renderMode</code></p>
+<p><strong>Type:</strong> <code>LayerFXRenderFeature.RenderMode</code></p>
 <ul>
 <li><strong>Hidden Camera</strong> (recommended): </li>
 </ul>
+<p><code>RenderMode.hiddenCamera</code></p>
 <p>Automatically configures a lightweight internal camera to
 render your selected layers. The internal camera will sync to the first correctly
 tagged camera (see the <strong>Camera Tag</strong> field). </p>
-<p>This mode fully supports URP lighting, shadows, and post processing.</p>
+<p>This mode fully supports URP lighting, shadows, and post-processing.</p>
 <p>This mode fully captures selected layers regardless of whether any scene cameras
 are already rendering the selected layers. To render specific objects with special
 effects, it is recommended to disable these layers from any other scene cameras so
-they do not render multiple times (e.g. Both from the scene camera <strong>and</strong> the 
+they do not render multiple times (e.g. both from the scene camera <strong>and</strong> the 
 LayerFX render feature).</p>
 <p>This mode can be used for most rendering setups, and is the recommended mode for
 most use cases.</p>
 <ul>
-<li><strong>Renderer List</strong> (advanced): </li>
+<li><strong>Renderer List</strong> (advanced):</li>
 </ul>
+<p><code>RenderMode.rendererList</code></p>
 <p>This mode functions nearly identically to the <strong>Hidden Camera</strong> mode, in that it
 renders the selected layers. The key difference is that
-it is slightly more performant, but does <strong>not</strong> support URP lighting, shadows and
-post processing.</p>
+it is slightly more efficient, but does <strong>not</strong> support URP lighting, shadows, and
+post-processing.</p>
 <p>Use this mode when you want to render a layer or multiple layers with one or more
 materials but do <strong>not</strong> care about rendering lighting effects on these layers.</p>
 <p><strong>Key Limitations</strong>: This mode requires the selected layers to be rendered from
@@ -886,6 +890,7 @@ and is offset by the improved efficiency of Renderer Lists.</p>
 <ul>
 <li><strong>From External Texture</strong> (advanced):</li>
 </ul>
+<p><code>RenderMode.fromExternalTexture</code></p>
 <p>This mode is recommended for advanced use cases, such as isolating built-in URP
 effects to specific layers. </p>
 <p>Unlike the workflow of the other two modes, this mode
@@ -896,21 +901,31 @@ texture to the screen using the selected materials.</p>
 Rendering an additional scene camera to a Render Texture will also add a 
 performance cost.</p>
 <h2 id="pass-name">Pass Name</h2>
+<p><strong>Code Reference:</strong> <code>LayerFXRenderFeature.settings.passName</code></p>
+<p><strong>Type:</strong> <code>string</code></p>
 <p>The selected name is given to the Render Graph passes
 and can be used to identify a specific pass while debugging.</p>
 <h2 id="renderer-index">Renderer Index</h2>
+<p><strong>Code Reference:</strong> <code>LayerFXRenderFeature.settings.rendererIndex</code></p>
+<p><strong>Type:</strong> <code>int</code></p>
 <p>The Renderer Index determines which renderer to render the effect with. 
 Your project's list of renderers can be found in the project's URP asset. </p>
 <h2 id="rendering-order">Rendering Order</h2>
+<p><strong>Code Reference:</strong> <code>LayerFXRenderFeature.settings.renderingOrder</code></p>
+<p><strong>Type:</strong> <code>RenderPassEvent</code></p>
 <p>Rendering Order determines where in the pipeline the effect will render. This can
 be used to render the effect on top of or below other objects. </p>
 <p>For most 2D projects, set the field to BeforeRenderingOpaques to render beneath
 other sprites. Set the field to AfterRenderingTransparents to render on top of
 other sprites.</p>
 <h2 id="render-texture">Render Texture</h2>
-<p>If using the <strong>From External Texture</strong> rendering mode, this is the texture that
-will be rendered to the screen using the selected materials.</p>
+<p><strong>Code Reference:</strong> <code>LayerFXRenderFeature.settings.renderTexture</code></p>
+<p><strong>Type:</strong> <code>RenderTexture</code></p>
+<p>If using the <strong>From External Texture</strong> rendering mode, this is the texture that will be 
+processed by the selected materials and composited onto the screen.</p>
 <h2 id="materials">Materials</h2>
+<p><strong>Code Reference:</strong> <code>LayerFXRenderFeature.settings.materials</code></p>
+<p><strong>Type:</strong> <code>List&lt;Material&gt;</code></p>
 <p>The Materials list determines what materials the feature will render with. As many
 materials as desired can be selected, but each material will cost 
 additional performance. </p>
@@ -918,21 +933,26 @@ additional performance. </p>
 The output of one material pass becomes the input to the next.</p>
 <p>Any valid material will be accepted. Invalid materials may cause issues, or not
 render at all. </p>
-<p>To see the requirements for a valid material, visit the <a href="https://myth0-games.github.io/LayerMaskRendererDocs/custom-shaders-and-materials/">Custom Shaders and
+<p>To see the requirements for a valid material, visit the <a href="../custom-shaders-and-materials/">Custom Shaders and
 Materials</a>
 documentation.</p>
 <h2 id="capture-layers">Capture Layers</h2>
+<p><strong>Code Reference:</strong> <code>LayerFXRenderFeature.settings.captureLayers</code></p>
+<p><strong>Type:</strong> <code>LayerMask</code></p>
 <p>These are the layers that will be rendered by the render feature. If rendering objects using 
 lit shaders, ensure a layer with a global light or other lighting is selected.
 Otherwise, the layers may render completely black. </p>
 <h2 id="downscaling">Downscaling</h2>
-<p>Increasing this value will cause the feature to be more performant at the cost of
-visual quality. </p>
+<p><strong>Code Reference:</strong> <code>LayerFXRenderFeature.settings.downscaling</code></p>
+<p><strong>Type:</strong> <code>int</code></p>
+<p>Increasing this value improves performance at the cost of image quality.</p>
 <p>For many effects, a downscaling value of 2-4 will have little visual
 impact but will massively improve performance.</p>
-<p>Higher downscaling values will most likely have a negative visual effect, but can be
+<p>Higher downscaling values will visibly reduce image quality, but can be
 used to make pixelated effects. </p>
 <h2 id="render-in-scene-view">Render in Scene View</h2>
+<p><strong>Code Reference:</strong> <code>LayerFXRenderFeature.settings.renderInSceneView</code></p>
+<p><strong>Type:</strong> <code>bool</code></p>
 <p>This value determines whether or not the render feature will render in Scene View.</p>
 <p>When using the <strong>Hidden Camera</strong> rendering mode, it is recommended to disable the
 selected layers from the Scene View culling mask to prevent double-rendering in
@@ -943,13 +963,19 @@ included in the Scene View culling mask due to Renderer List limitations.</p>
 correctly in Scene View due to texture sizing. It is recommended to disable this 
 setting when using the <strong>From External Texture</strong> mode.</p>
 <h2 id="color-buffer-format">Color Buffer Format</h2>
-<p>Select HDR or LDR color formats.</p>
+<p><strong>Code Reference:</strong> <code>LayerFXRenderFeature.settings.colorBufferFormat</code></p>
+<p><strong>Type:</strong> <code>LayerFXRenderFeature.BufferFormatMode</code></p>
+<p>Select <code>HDR</code> or <code>LDR</code> color formats.</p>
 <p>If LDR is selected, the effect will render with <strong>R8G8B8A8_SRGB</strong>.</p>
 <p>If HDR is selected, the effect will render with <strong>R16G16B16A16_SFloat</strong>.</p>
 <h2 id="filter-mode">Filter Mode</h2>
+<p><strong>Code Reference:</strong> <code>LayerFXRenderFeature.settings.filterMode</code></p>
+<p><strong>Type:</strong> <code>FilterMode</code></p>
 <p>Determines whether the effect will render with Point, Bilinear, or Trilinear
 filtering.</p>
 <h2 id="camera-tag">Camera Tag</h2>
+<p><strong>Code Reference:</strong> <code>LayerFXRenderFeature.settings.cameraTag</code></p>
+<p><strong>Type:</strong> <code>string</code></p>
 <p>When using the <strong>Hidden Camera</strong> rendering mode, the internal camera will sync
 itself to the first camera to render with this tag. </p>
 <p>Match this field to the tag on the desired camera for the effect to render
