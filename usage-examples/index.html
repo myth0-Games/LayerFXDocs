@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../version-support/">
+        <link rel="prev" href="../custom-render-pass-setup/">
       
       
-        <link rel="next" href="../license-info/">
+        <link rel="next" href="../api-reference/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>FAQ - LayerFX: Layer-Based Effects for URP</title>
+        <title>Usage Examples - LayerFX: Layer-Based Effects for URP</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#faq-and-troubleshooting" class="md-skip">
+        <a href="#usage-examples" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FAQ
+              Usage Examples
             
           </span>
         </div>
@@ -403,8 +403,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -415,13 +417,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -442,7 +442,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -457,10 +457,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../usage-examples/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage Examples
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -476,6 +503,160 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick legend
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isolated-blur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Isolated Blur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Isolated Blur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isolated-post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Isolated Post-Processing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Isolated Post-Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#water-distortion-and-reflections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Water Distortion and Reflections
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Water Distortion and Reflections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shockwaves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shockwaves
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shockwaves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D Effects
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -665,8 +846,6 @@
       
   
   
-    
-  
   
   
     
@@ -679,11 +858,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -704,7 +885,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -719,37 +900,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FAQ
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../faq-and-troubleshooting/" class="md-nav__link">
         
   
   
@@ -765,48 +919,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-are-my-layers-rendering-in-black-without-color" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why are my layers rendering in black without color?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-are-the-selected-layers-expanding-and-color-bleeding" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why are the selected layers expanding and color bleeding?
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -874,10 +986,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-are-my-layers-rendering-in-black-without-color" class="md-nav__link">
+  <a href="#quick-legend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why are my layers rendering in black without color?
+        Quick legend
       
     </span>
   </a>
@@ -885,10 +997,122 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-are-the-selected-layers-expanding-and-color-bleeding" class="md-nav__link">
+  <a href="#isolated-blur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why are the selected layers expanding and color bleeding?
+        Isolated Blur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Isolated Blur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isolated-post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Isolated Post-Processing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Isolated Post-Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#water-distortion-and-reflections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Water Distortion and Reflections
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Water Distortion and Reflections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shockwaves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shockwaves
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shockwaves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D Effects
       
     </span>
   </a>
@@ -941,7 +1165,7 @@
         <a href="./" class="md-path__link">
           
   <span class="md-ellipsis">
-    Support
+    Examples
   </span>
 
         </a>
@@ -960,18 +1184,117 @@
 
 
 
-<h1 id="faq-and-troubleshooting"><strong>FAQ and Troubleshooting</strong></h1>
-<h2 id="why-are-my-layers-rendering-in-black-without-color">Why are my layers rendering in black without color?</h2>
-<p>The selected layers rendering only in black is a common issue caused by not having any lighting layers selected. To fix this problem, there are a few options:</p>
+<h1 id="usage-examples">Usage Examples</h1>
+<p>This page features examples of how LayerFX can be used to create a variety of beautiful effects 
+in production-ready projects. </p>
+<p>These effects can be made by combining different material stacks, 
+render modes, and layer content within a scene.</p>
+<h3 id="quick-legend">Quick legend</h3>
+<ul>
+<li><strong>Hidden Camera:</strong> Isolates selected layers while preserving URP lighting and post-processing.</li>
+<li><strong>Renderer List:</strong> Renders selected layers through the fastest path, but with additional 
+limitations.</li>
+<li><strong>From External Texture:</strong> Renders a camera to a Render Texture and imports that texture 
+into LayerFX.</li>
+</ul>
+<h2 id="isolated-blur">Isolated Blur</h2>
+<p><img alt="Isolated Blur" src="../images/isolated_blur.png" /></p>
+<p>Blur the foreground and background while keeping gameplay elements perfectly sharp. This is 
+difficult to do with URP depth-of-field, especially in 2D projects where there is no real depth.</p>
+<h3 id="setup">Setup</h3>
+<p>Recommended Rendering Mode: <strong>Hidden Camera</strong></p>
+<p><strong>Alternative:</strong> Renderer List (when lighting and shadows are not required)</p>
 <ol>
-<li>Ensure a layer with a global light object is selected.</li>
-<li>Use other non-global light sources and ensure that their layer is selected.</li>
-<li>Change the material of the Sprite Renderers of the game objects on the selected layer to Sprite-Unlit-Default.</li>
+<li>Add one, two, or more LayerFX Render Features to your 2D Renderer. </li>
+<li>Set each Render Feature to the <strong>Hidden Camera</strong> rendering mode.</li>
+<li>On each render feature, select a subset of layers.
+For example, select your foreground layers on one render feature and your background layers 
+on another. </li>
+<li>Add any <a href="../custom-shaders-and-materials/">valid material</a> to the render features. 
+For isolated blur, select a blur material.
+If you are using the included Gaussian blur shader, add two materials to the stack:
+the Horizontal Blur Pass material <strong>and</strong> the Vertical Blur Pass material.</li>
 </ol>
-<h2 id="why-are-the-selected-layers-expanding-and-color-bleeding">Why are the selected layers expanding and color bleeding?</h2>
-<p>This is a recursive rendering issue that can occasionally be caused by having the renderer index set to the same value as the renderer that has the render feature attached.</p>
-<p>It will continuously render the selected layers through the same renderer, creating a bleeding effect.</p>
-<p>To fix this issue, simply create a second renderer and assign the renderer index field to the index of the new renderer.</p>
+<p>This effect can make your scene much more readable, and give it a softer look.</p>
+<p>The possibilities also extend far beyond blur. The same isolation technique can be used for 
+distortion, outlines, cinematic 
+color effects, shockwaves, and other custom fullscreen shader workflows.</p>
+<h2 id="isolated-post-processing">Isolated Post-Processing</h2>
+<p><img alt="Isolated Post-Processing" src="../images/isolated_post_processing.png" /></p>
+<p>LayerFX can be used to isolate URP post-processing effects.</p>
+<p>This is one of LayerFX's most powerful workflows because it allows built-in URP post-processing to 
+affect only selected layers instead of the entire screen.</p>
+<p>The above image demonstrates an isolated Bloom effect on the player's energy bar and the 
+spark particles. Isolating URP post-processing can also create effects such as selective 
+depth-of-field, selective color grading, and more.</p>
+<h3 id="setup_1">Setup</h3>
+<p>Recommended Rendering Mode: <strong>From External Texture</strong></p>
+<ol>
+<li>Add a LayerFX Render Feature to the 2D Renderer and select the <strong>From External Texture</strong>
+rendering mode. </li>
+<li>Create a secondary camera in your scene, rendering to a custom Render Texture.</li>
+<li>Input this texture into the <strong>Texture</strong> field on the LayerFX Render Feature.</li>
+<li>On the camera, set the Volume Mask to contain a layer with
+a post-processing volume containing your desired effects. </li>
+</ol>
+<p>LayerFX will then blit the texture to the screen, making selective post-processing simple.</p>
+<p>This method can also be combined with the LayerFX material stacking feature, allowing you to
+easily combine URP post-processing with custom materials.</p>
+<h2 id="water-distortion-and-reflections">Water Distortion and Reflections</h2>
+<p><img alt="Water Distortion" src="../images/water.png" /></p>
+<p>LayerFX can be used to create beautiful 2D water, with effects like distortion and reflection.</p>
+<h3 id="setup_2">Setup</h3>
+<p>Recommended Rendering Mode: <strong>From External Texture</strong></p>
+<ol>
+<li>Add a LayerFX Render Feature to the 2D Renderer using the <strong>From External Texture</strong>
+rendering mode.</li>
+<li>Create an additional scene camera that renders your player and other sprites you
+want reflected.</li>
+<li>Set the output of this camera to a Render Texture and input the texture to the
+LayerFX Render Feature.</li>
+<li>Use the LayerFX material stack to apply water materials, such as distortion, refraction, 
+and vertically flipping the sampled texture within the shader to create reflections.</li>
+</ol>
+<h2 id="shockwaves">Shockwaves</h2>
+<p><img alt="Shockwave" src="../images/shockwave.gif" /></p>
+<p>LayerFX can be used to create dynamic effects such as fullscreen shockwaves. Effects can be
+animated through code, using Coroutines, Update loops, or function triggers from the Animation
+Timeline.</p>
+<h3 id="setup_3">Setup</h3>
+<p>Recommended Rendering Mode: <strong>Hidden Camera</strong></p>
+<ol>
+<li>Add a LayerFX Render Feature to your 2D Renderer using the <strong>Hidden Camera</strong> rendering mode.</li>
+<li>Select the layers you want the shockwave to distort. </li>
+<li>Use the LayerFX Material field to apply the included shockwave sample material 
+or your own custom shader. </li>
+<li>Use code to animate the material to create dynamic shockwaves or other effects.</li>
+</ol>
+<p>The following code is an example Coroutine used to animate the included shockwave material.</p>
+<pre><code>    private IEnumerator ShockwaveCoroutine()
+    {
+        float distanceFromCenter = -0.1f;
+
+        while (distanceFromCenter &lt; 1f)
+        {
+            distanceFromCenter += Time.deltaTime * speed;
+
+            /* _WaveDistanceFromCenter controls how far from the center of the shockwave
+            the distortion ring appears in the included shockwave material. */
+            shockwaveMaterial.SetFloat(&quot;_WaveDistanceFromCenter&quot;, distanceFromCenter);
+
+            yield return null;
+        }
+    }
+</code></pre>
+<h2 id="3d-effects">3D Effects</h2>
+<p><img alt="3D Effects" src="../images/3d_effects.png" /></p>
+<p>While LayerFX is primarily designed with 2D projects in mind, the versatile nature of Render Graph
+allows it to be compatible with 3D projects as well.</p>
+<p>Simple 3D effects are easy to create with LayerFX. Fullscreen shockwaves, blur, distortion, 
+and other fullscreen material effects are compatible with 3D projects, 
+though visual quality may vary depending on the scene setup.</p>
+<p><strong>LayerFX is officially supported for URP projects.</strong> The 3D examples are provided as 
+compatibility demonstrations rather than dedicated 3D workflows.</p>
 
 
 
@@ -1007,7 +1330,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../version-support/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Version Support">
+          <a href="../custom-render-pass-setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Custom Render Pass Setup">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1017,20 +1340,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Version Support
+                Custom Render Pass Setup
               </div>
             </div>
           </a>
         
         
           
-          <a href="../license-info/" class="md-footer__link md-footer__link--next" aria-label="Next: License Information">
+          <a href="../api-reference/" class="md-footer__link md-footer__link--next" aria-label="Next: API Reference">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                License Information
+                API Reference
               </div>
             </div>
             <div class="md-footer__button md-icon">
