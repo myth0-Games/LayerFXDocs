@@ -19,7 +19,7 @@ and manageable.
 
 All demo content is optional and can be safely removed from your project.
 
-# Folder Structure
+## Folder Structure
 
 ```
 Assets
@@ -45,23 +45,23 @@ Assets
     └── README.txt
 ```
 
-# Directory Overview
+## Directory Overview
 
-## Runtime
+### Runtime
 
 Contains the LayerFX Render Feature and all 
 runtime code required for LayerFX to function.
 
 ✅ **Required**
 
-## Editor
+### Editor
 
 Contains editor scripts necessary for functionality such as inspector warnings, 
 inspector organization, and easy material stack reordering.
 
 ✅ **Required**
 
-## Samples
+### Samples
 
 Contains sample content such as the demo scene, preconfigured materials, and more.
 
@@ -80,11 +80,11 @@ Once you have finished exploring the sample content, the entire
 **Assets/LayerFX/Samples** folder can be safely deleted. 
 None of the files in this folder are required for LayerFX to function.
 
-## Documentation
+### Documentation
 
 Contains full offline markdown documentation.
 
-## README.txt
+### README.txt
 
 Contains links to online documentation.
 

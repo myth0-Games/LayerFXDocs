@@ -6,7 +6,7 @@ in production-ready projects.
 These effects can be made by combining different material stacks, 
 render modes, and layer content within a scene.
 
-### Quick legend
+## Quick legend
 
 - **Hidden Camera:** Isolates selected layers while preserving URP lighting and post-processing.
 - **Renderer List:** Renders selected layers through the fastest path, but with additional 

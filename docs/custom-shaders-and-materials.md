@@ -1,4 +1,4 @@
-# **Using Custom Shaders and Materials**
+# Using Custom Shaders and Materials
 
 Adding custom materials and shader effects to the render feature is fully supported.
 However, when adding your own custom material to the render feature, the material's shader must be set up in a specific way. 
@@ -7,13 +7,13 @@ However, when adding your own custom material to the render feature, the materia
 
 The shader must be set up using the URP fullscreen shader format. Only URP-compatible shaders are supported.
 
-### To create a shader graph in this format:
+**To create a shader graph in this format:**
 1. Right click the project window.
 2. Create -> Shader Graph -> URP -> Fullscreen Shader Graph
 
 ![Create Fullscreen Shader Graph](images/creating_fullscreen_shader_graph.png)
 
-### To change an existing shader graph to this format:
+**To change an existing shader graph to this format:**
 In the Graph Inspector window, under the Universal dropdown, find the Material dropdown and select Fullscreen.
 
 ![Change Existing Shader Graph Format](images/change_existing_shader_to_fullscreen.png)
@@ -46,7 +46,9 @@ To create the _BlitTexture field in Shader Graph:
 
 3\. To use the texture in your shader, connect a BlitTexture node to the Texture(T2) field on a Texture2D node.
 
-## For HLSL shaders:
+## HLSL shaders
+
+**For HLSL shaders:**
 
 - The shader should ideally render as a fullscreen pass. Other rendering methods may cause unintended behaviour.
 - The shader must sample from _BlitTexture. Sampling from other sources like _CameraColorTexture or _MainTex will not work.

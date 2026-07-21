@@ -1,5 +1,5 @@
 # Quick Start Guide
-### (2 Minutes)
+**(2 Minutes)**
 
 This guide will cover everything you need to know when importing LayerFX for the
 first time, including how to view and set up the included demo scene.

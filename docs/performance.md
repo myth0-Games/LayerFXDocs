@@ -1,4 +1,4 @@
-# **Performance**
+# Performance
 
 Extensive performance testing has been conducted on the asset using integrated graphics to 
 evaluate performance on lower-end hardware.

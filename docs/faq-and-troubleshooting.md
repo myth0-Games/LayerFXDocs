@@ -1,4 +1,4 @@
-# **FAQ and Troubleshooting**
+# FAQ and Troubleshooting
 
 ## Why are my layers rendering in black without color?
 

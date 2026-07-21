@@ -1,9 +1,9 @@
-# **LayerFX Render Feature Setup**
-### (5 minutes)
+# LayerFX Render Feature Setup
+**(5 minutes)**
 
 Setting up your own LayerFX render feature is simple. Follow these steps to get started!
 
-# 1. Scene Setup
+## Scene Setup
 
 We'll start off with a simple scene in the editor. The player sprite is very dark against the background, so in this guide, we'll set up a blur pass on the background to make the player pop.
 
@@ -26,11 +26,11 @@ Here, we added a layer called 'Background'.
 
 ![CullingMask](images/culling_mask.png)
 
-# 2. Renderer2D Setup
+## Renderer2D Setup
 
 Now we need to configure the render feature on the renderer. 
 
-## Locating the Renderer2D asset
+### Locating the Renderer2D asset
 
 Locate your project's Renderer2D asset.
 
@@ -39,7 +39,7 @@ If you can't find it, first find your Universal Render Pipeline asset. This can 
 Once you have located your Universal Render Pipeline Asset, the Renderer List field at the top of the Inspector contains your project's Renderer2D assets.
 
 
-## Adding the Render Feature
+### Adding the Render Feature
 
 Scroll to the bottom of the Inspector window of your Renderer2D asset, and click 'Add Render Feature'.
 
@@ -49,7 +49,7 @@ Select **'Layer FX Render Feature'.**
 
 ![AddLayerFXRenderFeature](images/add_layerfx_render_feature.png)
 
-## Configuring the Render Feature
+### Configuring the Render Feature
 
 Now we must configure the settings of the render feature.
 
