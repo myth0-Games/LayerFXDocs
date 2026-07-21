@@ -21,17 +21,19 @@ nav:
 
 theme:
   name: material
+  logo: images/logo.png
+  favicon: images/favicon.png
 
   palette:
 
     - scheme: default
-      primary: blue grey
+      primary: black
       toggle:
         icon: material/weather-night
         name: Dark mode
 
     - scheme: slate
-      primary: blue grey
+      primary: black
       toggle:
         icon: material/weather-sunny
         name: Light mode
@@ -45,3 +47,6 @@ theme:
     - content.code.copy
     - search.suggest
     - search.highlight
+
+extra_css:
+  - stylesheets/extra.css
