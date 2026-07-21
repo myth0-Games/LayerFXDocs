@@ -40,7 +40,7 @@ Assets
     │   ├── Shaders
     │   └── Sprites
     │
-    ├── Documentation~
+    ├── Documentation
     │
     └── README.txt
 ```
