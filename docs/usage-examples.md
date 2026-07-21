@@ -6,12 +6,20 @@ in production-ready projects.
 These effects can be made by combining different material stacks, 
 render modes, and layer content within a scene.
 
+### Quick legend
+
+- **Hidden Camera:** Isolates selected layers while preserving URP lighting and post-processing.
+- **Renderer List:** Renders selected layers through the fastest path, but with additional 
+limitations.
+- **From External Texture:** Renders a camera to a Render Texture and imports that texture 
+into LayerFX.
+
 ## Isolated Blur
 
 ![Isolated Blur](images/isolated_blur.png)
 
-Blur the foreground and background sprites, but not the midground. This is difficult to do with
-URP depth-of-field, especially in 2D projects where there is no real depth.
+Blur the foreground and background while keeping gameplay elements perfectly sharp. This is 
+difficult to do with URP depth-of-field, especially in 2D projects where there is no real depth.
 
 ### Setup
 
@@ -20,7 +28,7 @@ Recommended Rendering Mode: **Hidden Camera**
 **Alternative:** Renderer List (when lighting and shadows are not required)
 
 1. Add one, two, or more LayerFX Render Features to your 2D Renderer. 
-2. Set all Render Features to the **Hidden Camera** rendering mode.
+2. Set each Render Feature to the **Hidden Camera** rendering mode.
 3. On each render feature, select a subset of layers.
 For example, select your foreground layers on one render feature and your background layers 
 on another. 
@@ -31,9 +39,9 @@ the Horizontal Blur Pass material **and** the Vertical Blur Pass material.
 
 This effect can make your scene much more readable, and give it a softer look.
 
-The possibilities go much beyond blur, though. Using this method you can create isolated
-distortion, outline effects, cinematic effects, and much more! The only limit is your skill with
-writing shaders.
+The possibilities also extend far beyond blur. The same isolation technique can be used for 
+distortion, outlines, cinematic 
+color effects, shockwaves, and other custom fullscreen shader workflows.
 
 ## Isolated Post-Processing
 
@@ -41,7 +49,7 @@ writing shaders.
 
 LayerFX can be used to isolate URP post-processing effects.
 
-This is one of LayerFX’s most powerful workflows because it allows built-in URP post-processing to 
+This is one of LayerFX's most powerful workflows because it allows built-in URP post-processing to 
 affect only selected layers instead of the entire screen.
 
 The above image demonstrates an isolated Bloom effect on the player's energy bar and the 
@@ -74,14 +82,14 @@ LayerFX can be used to create beautiful 2D water, with effects like distortion a
 
 Recommended Rendering Mode: **From External Texture**
 
-1. Add a Layer FX Render Feature to the 2D Renderer using the **From External Texture**
+1. Add a LayerFX Render Feature to the 2D Renderer using the **From External Texture**
 rendering mode.
 2. Create an additional scene camera that renders your player and other sprites you
 want reflected.
 3. Set the output of this camera to a Render Texture and input the texture to the
 LayerFX Render Feature.
 4. Use the LayerFX material stack to apply water materials, such as distortion, refraction, 
-and flipping the sprites within the shader for a reflection.
+and vertically flipping the sampled texture within the shader to create reflections.
 
 ## Shockwaves
 
@@ -112,8 +120,8 @@ The following code is an example Coroutine used to animate the included shockwav
         {
             distanceFromCenter += Time.deltaTime * speed;
 
-            /*_WaveDistanceFromCenter controls how far from center of the shockwave area the
-            distortion will appear in the included shockwave material*/
+            /* _WaveDistanceFromCenter controls how far from the center of the shockwave
+            the distortion ring appears in the included shockwave material. */
             shockwaveMaterial.SetFloat("_WaveDistanceFromCenter", distanceFromCenter);
 
             yield return null;
@@ -128,5 +136,9 @@ The following code is an example Coroutine used to animate the included shockwav
 While LayerFX is primarily designed with 2D projects in mind, the versatile nature of Render Graph
 allows it to be compatible with 3D projects as well.
 
-Simple 3D effects are easy to make with LayerFX. Things like fullscreen shockwaves, blur, etc.
-are all compatible with 3D projects, though effect quality may vary. 
+Simple 3D effects are easy to create with LayerFX. Fullscreen shockwaves, blur, distortion, 
+and other fullscreen material effects are compatible with 3D projects, 
+though visual quality may vary depending on the scene setup.
+
+**LayerFX is officially supported for URP projects.** The 3D examples are provided as 
+compatibility demonstrations rather than dedicated 3D workflows.

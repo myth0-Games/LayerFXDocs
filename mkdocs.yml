@@ -1,15 +1,24 @@
-site_name: 'LayerFX : Layer-Based Effects for URP'
+site_name: 'LayerFX: Layer-Based Effects for URP'
 nav:
   - Home: index.md
-  - Quick Start: quick-start-guide.md
-  - Package Contents: contents.md
-  - Custom Render Pass Setup: custom-render-pass-setup.md
-  - API Reference: api-reference.md
-  - Custom Shaders and Materials: custom-shaders-and-materials.md
-  - Performance: performance.md
-  - FAQ: faq-and-troubleshooting.md
-  - Version Support: version-support.md
-  - License Information: license-info.md
+  - Getting Started:
+    - Quick Start: quick-start-guide.md
+    - Package Contents: contents.md
+    - Custom Render Pass Setup: custom-render-pass-setup.md
+
+  - Examples:
+    - Usage Examples: usage-examples.md
+  
+  - Reference:
+    - API Reference: api-reference.md
+    - Custom Shaders and Materials: custom-shaders-and-materials.md
+    - Performance: performance.md
+    - Version Support: version-support.md
+
+  - Support:
+    - FAQ: faq-and-troubleshooting.md
+    - License Information: license-info.md
+
 theme:
   name: material
 
@@ -31,6 +40,8 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.footer
+    - navigation.top
+    - navigation.path
     - content.code.copy
     - search.suggest
     - search.highlight

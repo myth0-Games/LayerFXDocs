@@ -22,6 +22,10 @@ Tests were conducted with the following specs.
  - **Unity Version:** Unity 6000.3.11f1
  - **Platform:** Windows 11
 
+These results do not mean LayerFX is universally faster than the main camera. 
+They demonstrate that, in this specific test scene, the Hidden Camera workflow with 
+simplified rendering settings scaled efficiently when rendering large numbers of sprites.
+
 Your exact numbers may vary on different hardware, resolution, versions, or platforms.
 
 ## Boosting Performance

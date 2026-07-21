@@ -62,7 +62,7 @@ For most cases, you can leave this field set to 0. For this guide, we can leave 
 at 0.
 - **Rendering Order:** This determines when during the rendering pipeline the feature will execute. For most 2D projects, you can
 select **BeforeRenderingOpaques** to render behind the main scene layers, or
-**AfterRenderTransparents** to render on top of the main scene. As we are trying to blur the background, we will set it to **BeforeRenderingOpaques**.
+**AfterRenderingTransparents** to render on top of the main scene. As we are trying to blur the background, we will set it to **BeforeRenderingOpaques**.
 - **Material Stack:** Select 1 or more materials to render the desired layers with. Selecting more than one material will stack the materials in the listed order.
 This allows users to combine multiple effects, or make multi-pass effects. In this tutorial, we are creating a 2-pass blur to save performance.
 We will add two blur materials, one that blurs horizontally and one that blurs vertically. 
