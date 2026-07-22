@@ -645,34 +645,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Shader Format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-create-a-shader-graph-in-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To create a shader graph in this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-change-an-existing-shader-graph-to-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To change an existing shader graph to this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -698,10 +670,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#for-hlsl-shaders" class="md-nav__link">
+  <a href="#hlsl-shaders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        For HLSL shaders:
+        HLSL shaders
       
     </span>
   </a>
@@ -932,34 +904,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Shader Format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-create-a-shader-graph-in-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To create a shader graph in this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-change-an-existing-shader-graph-to-this-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To change an existing shader graph to this format:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -985,10 +929,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#for-hlsl-shaders" class="md-nav__link">
+  <a href="#hlsl-shaders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        For HLSL shaders:
+        HLSL shaders
       
     </span>
   </a>
@@ -1060,19 +1004,17 @@
 
 
 
-<h1 id="using-custom-shaders-and-materials"><strong>Using Custom Shaders and Materials</strong></h1>
+<h1 id="using-custom-shaders-and-materials">Using Custom Shaders and Materials</h1>
 <p>Adding custom materials and shader effects to the render feature is fully supported.
 However, when adding your own custom material to the render feature, the material's shader must be set up in a specific way. </p>
 <h2 id="shader-format">Shader Format</h2>
 <p>The shader must be set up using the URP fullscreen shader format. Only URP-compatible shaders are supported.</p>
-<h3 id="to-create-a-shader-graph-in-this-format">To create a shader graph in this format:</h3>
-<ol>
-<li>Right click the project window.</li>
-<li>Create -&gt; Shader Graph -&gt; URP -&gt; Fullscreen Shader Graph</li>
-</ol>
+<p><strong>To create a shader graph in this format:</strong>
+1. Right click the project window.
+2. Create -&gt; Shader Graph -&gt; URP -&gt; Fullscreen Shader Graph</p>
 <p><img alt="Create Fullscreen Shader Graph" src="../images/creating_fullscreen_shader_graph.png" /></p>
-<h3 id="to-change-an-existing-shader-graph-to-this-format">To change an existing shader graph to this format:</h3>
-<p>In the Graph Inspector window, under the Universal dropdown, find the Material dropdown and select Fullscreen.</p>
+<p><strong>To change an existing shader graph to this format:</strong>
+In the Graph Inspector window, under the Universal dropdown, find the Material dropdown and select Fullscreen.</p>
 <p><img alt="Change Existing Shader Graph Format" src="../images/change_existing_shader_to_fullscreen.png" /></p>
 <h2 id="blend-mode">Blend Mode</h2>
 <p>All shader blend modes are supported.</p>
@@ -1088,7 +1030,8 @@ However, when adding your own custom material to the render feature, the materia
 <p>2. Select the new variable. In the Graph Inspector window, under Node Settings, set the Name to "BlitTexture" and the Reference to "_BlitTexture" exactly as shown in the image. Ensure "Show in Inspector" is checked.</p>
 <p><img alt="Blit Texture Node Settings" src="../images/blit_texture_node_settings.png" /></p>
 <p>3. To use the texture in your shader, connect a BlitTexture node to the Texture(T2) field on a Texture2D node.</p>
-<h2 id="for-hlsl-shaders">For HLSL shaders:</h2>
+<h2 id="hlsl-shaders">HLSL shaders</h2>
+<p><strong>For HLSL shaders:</strong></p>
 <ul>
 <li>The shader should ideally render as a fullscreen pass. Other rendering methods may cause unintended behaviour.</li>
 <li>The shader must sample from _BlitTexture. Sampling from other sources like _CameraColorTexture or _MainTex will not work.</li>
@@ -1275,7 +1218,7 @@ However, when adding your own custom material to the render feature, the materia
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.footer", "navigation.top", "navigation.path", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.footer", "navigation.top", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>

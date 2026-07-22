@@ -431,10 +431,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#5-minutes" class="md-nav__link">
+  <a href="#scene-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        (5 minutes)
+        Scene Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renderer2d-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renderer2D Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Renderer2D Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#locating-the-renderer2d-asset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locating the Renderer2D asset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-the-render-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding the Render Feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-render-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring the Render Feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
       
     </span>
   </a>
@@ -863,10 +924,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#5-minutes" class="md-nav__link">
+  <a href="#scene-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        (5 minutes)
+        Scene Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renderer2d-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renderer2D Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Renderer2D Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#locating-the-renderer2d-asset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locating the Renderer2D asset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-the-render-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding the Render Feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-render-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring the Render Feature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
       
     </span>
   </a>
@@ -938,10 +1060,10 @@
 
 
 
-<h1 id="layerfx-render-feature-setup"><strong>LayerFX Render Feature Setup</strong></h1>
-<h3 id="5-minutes">(5 minutes)</h3>
+<h1 id="layerfx-render-feature-setup">LayerFX Render Feature Setup</h1>
+<p><strong>(5 minutes)</strong></p>
 <p>Setting up your own LayerFX render feature is simple. Follow these steps to get started!</p>
-<h1 id="1-scene-setup">1. Scene Setup</h1>
+<h2 id="scene-setup">Scene Setup</h2>
 <p>We'll start off with a simple scene in the editor. The player sprite is very dark against the background, so in this guide, we'll set up a blur pass on the background to make the player pop.</p>
 <p><img alt="DemoScene" src="../images/demo_scene.png" /></p>
 <p>This scene contains the default Unity Main Camera, as well as a Global Light 2D. There is also the player game object, some walls and platforms, and the background sprites.</p>
@@ -963,18 +1085,18 @@ Here, we added a layer called 'Background'. </li>
 </li>
 </ul>
 <p><img alt="CullingMask" src="../images/culling_mask.png" /></p>
-<h1 id="2-renderer2d-setup">2. Renderer2D Setup</h1>
+<h2 id="renderer2d-setup">Renderer2D Setup</h2>
 <p>Now we need to configure the render feature on the renderer. </p>
-<h2 id="locating-the-renderer2d-asset">Locating the Renderer2D asset</h2>
+<h3 id="locating-the-renderer2d-asset">Locating the Renderer2D asset</h3>
 <p>Locate your project's Renderer2D asset.</p>
 <p>If you can't find it, first find your Universal Render Pipeline asset. This can be found by going to <strong>Edit &gt; Project Settings &gt; Quality &gt; Render Pipeline Asset</strong>.</p>
 <p>Once you have located your Universal Render Pipeline Asset, the Renderer List field at the top of the Inspector contains your project's Renderer2D assets.</p>
-<h2 id="adding-the-render-feature">Adding the Render Feature</h2>
+<h3 id="adding-the-render-feature">Adding the Render Feature</h3>
 <p>Scroll to the bottom of the Inspector window of your Renderer2D asset, and click 'Add Render Feature'.</p>
 <p><img alt="AddRenderFeature" src="../images/add_render_feature.png" /></p>
 <p>Select <strong>'Layer FX Render Feature'.</strong></p>
 <p><img alt="AddLayerFXRenderFeature" src="../images/add_layerfx_render_feature.png" /></p>
-<h2 id="configuring-the-render-feature">Configuring the Render Feature</h2>
+<h3 id="configuring-the-render-feature">Configuring the Render Feature</h3>
 <p>Now we must configure the settings of the render feature.</p>
 <ul>
 <li><strong>Render Mode:</strong> This determines <strong>how</strong> LayerFX will render. Here, we will 
@@ -1127,7 +1249,7 @@ and is a known limitation for that mode.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.footer", "navigation.top", "navigation.path", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.footer", "navigation.top", "navigation.path", "content.code.copy", "search.suggest", "search.highlight", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
