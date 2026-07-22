@@ -8,3 +8,53 @@
 .md-header__button.md-logo {
     padding: 0.2rem;
 }
+
+.hero-banner {
+  margin: -1rem -1.2rem 2rem -1.2rem;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.image-grid > div {
+    text-align: center;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.image-grid p {
+    margin-top: 0.5rem;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
