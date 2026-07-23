@@ -51,7 +51,14 @@ automatically apply your effects to the selected content.
 
 ## Watch the Trailer
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Q5fk6dURLC4?si=Rz1a8Tn_MQ1mVXpF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="video-wrapper">
+  <iframe
+    src="https://www.youtube.com/embed/Q5fk6dURLC4"
+    title="LayerFX Trailer"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
 
 ## Why LayerFX?
 

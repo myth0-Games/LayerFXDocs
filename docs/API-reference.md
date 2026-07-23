@@ -3,6 +3,14 @@
 The following page contains detailed information about the different settings and
 fields available for configuring the render feature.
 
+## Namespace
+
+When referencing LayerFX properties through code, ensure you include the following at the top of the script.
+
+```
+using Myth0Games.LayerFX;
+```
+
 ## Render Mode
 
 **Code Reference:** `LayerFXRenderFeature.settings.renderMode`
