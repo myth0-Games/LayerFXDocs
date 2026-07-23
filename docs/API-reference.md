@@ -19,7 +19,7 @@ using Myth0Games.LayerFX;
 
 - **Hidden Camera** (recommended): 
 
-`RenderMode.hiddenCamera`
+`RenderMode.HiddenCamera`
 
 Automatically configures a lightweight internal camera to
 render your selected layers. The internal camera will sync to the first correctly
@@ -38,7 +38,7 @@ most use cases.
 
 - **Renderer List** (advanced):
 
-`RenderMode.rendererList`
+`RenderMode.RendererList`
 
 This mode functions nearly identically to the **Hidden Camera** mode, in that it
 renders the selected layers. The key difference is that
@@ -56,7 +56,7 @@ and is offset by the improved efficiency of Renderer Lists.
 
 - **From External Texture** (advanced):
 
-`RenderMode.fromExternalTexture`
+`RenderMode.FromExternalTexture`
 
 This mode is recommended for advanced use cases, such as isolating built-in URP
 effects to specific layers. 
