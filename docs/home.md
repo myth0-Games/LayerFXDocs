@@ -1,12 +1,13 @@
----
-  hide:
-   - toc
+# LayerFX Offline Documentation
+
+**Start here if you are viewing the documentation from inside the Unity package.**
+
+For the best browsing experience, online documentation is available at:
+https://myth0-games.github.io/LayerFXDocs
+
 ---
 
-
-<div class="hero-banner">
-  <img src="images/banner.png" alt="LayerFX Banner">
-</div>
+![banner](images/banner.png)
 
 # LayerFX: Layer-Based Fullscreen Effects for URP
 
@@ -16,45 +17,33 @@ distortion, shockwaves, reflections, and custom shader effects to exactly the la
 Select a layer mask, add one or more materials, and LayerFX will 
 automatically apply your effects to the selected content.
 
-<div class="button-row">
-  <a href="usage-examples" class="md-button">
-    View Examples
-  </a>
+## Quick Navigation
 
-  <a href="quick-start-guide" class="md-button">
-    Quick Start
-  </a>
-</div>
+- **[Quick Start Guide](quick-start-guide.md)** — Set up LayerFX in a new project.
+- **[Usage Examples](usage-examples.md)** — See common production workflows.
+- **[API Reference](api-reference.md)** — Detailed field and setting reference.
+- **[Custom Shaders and Materials](custom-shaders-and-materials.md)** — Create your own fullscreen effects.
+- **[FAQ and Troubleshooting](faq-and-troubleshooting.md)** — Fix common setup issues.
 
 ## See LayerFX in Action
 
-<div class="image-grid">
-  <div>
-    <img src="images/isolated_blur.png">
-    <p>Selective blur</p>
-  </div>
+![Isolated Blur](images/isolated_blur.png)
 
-  <div>
-    <img src="images/water.png">
-    <p>Water distortion and reflections</p>
-  </div>
+**Selective Blur**
 
-  <div>
-    <img src="images/shockwave.gif">
-    <p>Dynamic shockwaves</p>
-  </div>
-</div>
+![Water Effects](images/water.png)
+
+**Water Distortion and Reflections**
+
+![Shockwaves](images/shockwave.gif)
+
+**Dynamic Shockwaves**
 
 ## Watch the Trailer
 
-<div class="video-wrapper">
-  <iframe
-    src="https://www.youtube.com/embed/Q5fk6dURLC4"
-    title="LayerFX Trailer"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-</div>
+You can watch the LayerFX trailer here:
+
+https://www.youtube.com/watch?v=Q5fk6dURLC4
 
 ## Why LayerFX?
 
