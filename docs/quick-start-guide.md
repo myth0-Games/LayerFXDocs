@@ -4,7 +4,7 @@
 This guide will cover everything you need to know when importing LayerFX for the
 first time, including how to view and set up the included demo scene.
 
-**Already installed the demo scene and want to start building your own effects?** Jump to the 
+**Already tried out the demo scene and want to start building your own effects?** Jump to the 
 [LayerFX Render Feature Setup Page](custom-render-pass-setup.md).
 
 ## Installation

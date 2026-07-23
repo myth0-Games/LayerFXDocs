@@ -53,4 +53,4 @@ extra_css:
   - stylesheets/extra.css
 
 exclude_docs: |
-  home.md
+  Home.md
